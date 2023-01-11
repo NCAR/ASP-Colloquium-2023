@@ -1,1 +1,1 @@
-## Add in scriptrs/notebooks that you think might be useful here ##
+## Add in scripts/notebooks that you think might be useful here ##
