@@ -4,7 +4,17 @@
 format: jb-book
 root: intro
 chapters:
+- file: information.md
+- file: before_arrival.md
+- file: schedule
+- file: presenters
+- file: students
 - file: exercises
-- file: notebooks
-- file: markdown-notebooks
-- file: mymarkdownfile
+  sections:
+  - file: exercises_cesm.md
+  - file: exercises_wrf.md
+  - file: exercises_class.md
+  - file: exercises_obs.md
+
+
+
