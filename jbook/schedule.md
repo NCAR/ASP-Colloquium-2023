@@ -164,7 +164,7 @@ Free time:
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  Boundary Layers and Applications			|
-| 9:30-10:30 | **Project Time**  <br/> REsurety        |  |
+| 9:30-10:30 | **Project Time**        |  |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Project time and talk preparation**		   | 	||
 | 12:30-1:30 | *Lunch* 			 |  				||			
