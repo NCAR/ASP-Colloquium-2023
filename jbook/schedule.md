@@ -35,7 +35,7 @@ Students Arrive in Boulder
 | 8:30-9:30  | **Sukanta Basu** <br/> University at Albany     | Similarity theory			|
 | 9:30-10:30 | **Jakob Mann**  <br/> Technical University of Denmark         | 	Wind Energy Systems |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:30| **Paquita Zuidema** <br/> University of Miami		   |  Aerosols in the Boundary Layer				||
+| 11:00-12:30| **Paquita Zuidema** <br/> University of Miami		   |  **Mixed-phase Microphysics in the Boundary Layer**			||
 | 12:30-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	**Professional Development**		   | TBD				||
 | 3:00-3:30  | 	*Break* 		   |				||		
@@ -79,7 +79,7 @@ Students Arrive in Boulder
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
-| 8:30-9:30  | **Gordon Bonan** <br/>   National Center for Atmospheric Research        | Arctic Boundary Layers			|
+| 8:30-9:30  | **Gordon Bonan** <br/>   National Center for Atmospheric Research        | Land surface fluxes			|
 | 9:30-10:30 | **John Finnigan**  <br/> CSIRO, Australia    | 	Turbulence and Canopies |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Ivana Stiperski** <br/> National Center for Atmospheric Research  		   |  	Turbulence Over Orography		||
@@ -148,7 +148,7 @@ Free time:
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
-| 8:30-9:30  | **Elie Bou-Zeid** <br/> Princeton      |  Boundary Layers and Applications			|
+| 8:30-9:30  | **Elie Bou-Zeid** <br/> Princeton      |  **Beyond the textbook: Unsteady and baroclinic flow and turbulence in the ABL**		|
 | 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	Boundary Layers and Wind Resources |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Professional development**		   | Psychological Safety	||
