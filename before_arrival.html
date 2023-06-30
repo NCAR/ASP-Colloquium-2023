@@ -360,11 +360,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-requirements-and-setup">Computing requirements and setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ncar-supercomputer-environment">NCAR Supercomputer Environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-material">Reading material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presentations">Presentations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-earth-system-model-cesm">Community Earth System Model (CESM)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-research-and-forecasting-model-wrf">Weather Research and Forecasting Model (WRF)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-models">CLASS Models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-jupyterhub">Python and Jupyterhub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemistry-land-surface-atmosphere-soil-slab-class-model">Chemistry Land-surface Atmosphere Soil Slab (CLASS) model</a></li>
 </ul>
             </nav>
         </div>
@@ -378,23 +380,78 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="before-you-arrive">
 <h1>Before you arrive<a class="headerlink" href="#before-you-arrive" title="Permalink to this headline">#</a></h1>
-<p>Not quite ready. Check back soon!</p>
+<p>Although the colloquium does not require a signficant amount of preparation before the meeting, it would help students get the most out of the colloquium if they were to familiarize themselves with as many of the items below as possible.</p>
+<p>This is not meant to be exhaustive at this time. But If anything is unclear, doesn’t work, or you need further help, please contact <a class="reference external" href="mailto:rneale&#37;&#52;&#48;ucar&#46;edu">Rich Neale</a>. I hope to set up a messaging group for us all (either Google chat or Slack) and will send out survey questions about that and a few other topics also.</p>
+<div class="section" id="computing-requirements-and-setup">
+<h2>Computing requirements and setup<a class="headerlink" href="#computing-requirements-and-setup" title="Permalink to this headline">#</a></h2>
+<p>The colloquium will operate under the assumption that students have a working laptop available to them for the entire 2 week period. A mac or windows machine is preferable. The most recent updates of software should be applied where possible. Please contact <a class="reference external" href="mailto:rneale&#37;&#52;&#48;ucar&#46;edu">Rich Neale</a> as soon as possible if you are unable to provide a laptop of your own.</p>
+<p>Priority software that should be installed (or updated) and available on your laptop:</p>
+<ul class="simple">
+<li><p>Conda (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Download</a>)</p>
+<ul>
+<li><p>This will allow us to a import and use a number of packages below, especially related to using python</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://github.com/">github</a></p>
+<ul>
+<li><p>github is a widely used code revision software for large code bases that are collaboratively developed</p></li>
+<li><p>You will need to sign up if you do no currently have a log in. It’s pretty simple and we’ll use it only for a few downloads of data from the collqouuim repository</p></li>
+<li><p>It is easily installed using conda: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">git</span></code></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.python.org/">Python</a></p>
+<ul>
+<li><p>This software comes with the conda install by default</p></li>
+<li><p>It is the analysis and plotting software that most people will be familiar with. We will provde some minimal diagnostics scripts, but hope that students develop (and possibly share) their own scripts with others.</p></li>
+<li><p>As an example here are simple plotting guidelines from the <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/diagnostics/cam/basics.html">CESM tutorial</a></p></li>
+<li><p>Key to using the correct packages in a notebook (e.g., <a class="reference external" href="https://docs.xarray.dev/en/stable/"><code class="docutils literal notranslate"><span class="pre">xarray</span></code></a> - which handles multidimensional arrays) is the creation of conda environments (<a class="reference external" href="https://medium.com/&#64;nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-steps-abeab8b8d084">example</a>). See if you can create and use an environment in jupyter-hub from this example.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/#">jupyter-hub</a></p>
+<ul>
+<li><p>Jupyter-hub is a web-based server that can handle simple file editing, ssh sessions to the NCAR supercomputers and editing of python and jupyter notebooks that streamline analysis of data.</p></li>
+<li><p>It can easily be installed as a conda package: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">-c</span> <span class="pre">conda-forge</span> <span class="pre">jupyterlab</span></code></p></li>
+</ul>
+</li>
+<li><p>A commonly used web browser (e.g., chrome, firefox, safari)</p>
+<ul>
+<li><p>This is needed for both your local (laptop) jupyterhub server and the NCAR machines (<a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549542">Cheyenne</a> and <a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549550">Casper</a>) jupyter-hub server. The NCAR <a class="reference external" href="https://jupyterhub.hpc.ucar.edu/">jupyter-hub server</a> will be ready to use when you get your CISL login credentials (see below)</p></li>
+</ul>
+</li>
+<li><p>Some alternatives to jupyterhub for connecting to <a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549542">Cheyenne</a> and <a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549550">Casper</a> and file editing</p>
+<ul>
+<li><p>Terminal clients (<a class="reference external" href="https://www.makeuseof.com/best-ssh-clients-mac/">mac</a>|<a class="reference external" href="https://www.maketecheasier.com/best-terminal-emulators-for-windows/">windows</a>)</p></li>
+<li><p>Text Editors: emacs (<a class="reference external" href="https://emacsformacosx.com/">mac</a>|<a class="reference external" href="https://www.gnu.org/software/emacs/download.html">windows</a>) or vi (<a class="reference external" href="https://www.vim.org/download.php">download</a>)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="ncar-supercomputer-environment">
+<h2>NCAR Supercomputer Environment<a class="headerlink" href="#ncar-supercomputer-environment" title="Permalink to this headline">#</a></h2>
+<p>To run both WRF and CESM access will be made available to students on the NCAR <a class="reference external" href="https://www2.cisl.ucar.edu/">Computational Information Systems Laboratory (CISL)</a> supercomputing environment. This will include the NCAR-University Wyoming supercompute <a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549542">Cheyenne</a> and compute cluster <a class="reference external" href="https://arc.ucar.edu/knowledge_base/70549550">Casper</a>. You will receive information about your usernames on the CISL systems soon (hopefully by July 3). Once you have received your credentials you should try to <a class="reference external" href="https://arc.ucar.edu/knowledge_base/74317885"><strong>access the system and setup your user space software</strong></a></p>
+</div>
 <div class="section" id="reading-material">
 <h2>Reading material<a class="headerlink" href="#reading-material" title="Permalink to this headline">#</a></h2>
+<p>There is a wide array of material available for learning about and understanding atmospheric boundary layer science (both free and for purchase). A couple of classic books to be maybe dip into over the next 2 weeks if you have lots of time are <a class="reference external" href="https://link.springer.com/book/10.1007/978-94-009-3027-8">An Introduction to Boundary Layer Meteorology (Stull)
+</a>, <a class="reference external" href="https://www.amazon.com/Fundamentals-Boundary-Layer-Meteorology-Springer-Atmospheric/dp/3319608517">Fundamentals of Boundary-Layer Meteorology</a> and <a class="reference external" href="https://www.cambridge.org/core/books/atmospheric-boundary-layer/5DAB600E63724FF20543CFD5E29FE237">Atmospheric Boundary Layer: Integrating Air Chemistry and Land Interactions</a>. Of course these books are very expensive if your librbary does not have a copy. However, there are also many sets of excellent university course notes available that make good reading, e.g., <a class="reference external" href="https://atmos.uw.edu/~breth/classes/AS547/">University of Washington (Chris Bretherton)</a>, great introcuction to theory) and <a class="reference external" href="https://www.eoas.ubc.ca/books/Practical_Meteorology/prmet102/Ch18-abl-v102.pdf">University of British Columbia</a>, great visuals of boundary layer morphology.</p>
+</div>
+<div class="section" id="presentations">
+<h2>Presentations<a class="headerlink" href="#presentations" title="Permalink to this headline">#</a></h2>
+<p>As a ‘get to know everyone’ on the first day of the colloquium (Monday 17th July, 11-12:30) we are asking each of you to give a 3 minute presnentation using 2 slides only. We would like you to spend the first slide talking generally about your graduate project (topic, hypotheses, key findings if you have them). Remember that each student is at a different  stage in their research, and it’s not meeant to be a test in any way. For the 2nd slide we would like you to talk about a recent problem you had tried to address very recently (~weeks). You could have been successful or not at solving it! The aim is that students get a sense of other students’ day to day activities. So think about the content and be sure to drop your slides in <span class="xref myst">this google drive</span> that everyone should have access to. Email me if not!</p>
+<p>On the final afternoon (Friday, 28th July) we ask the students to give a 5-minute summary presentation of their findings from the research they worked on during the project time of the colloquium. The goal is not only to communicate your ideas but also stimulate conversation wih the rest of the group on how the research project could be carried forward.</p>
 </div>
 <div class="section" id="community-earth-system-model-cesm">
 <h2>Community Earth System Model (CESM)<a class="headerlink" href="#community-earth-system-model-cesm" title="Permalink to this headline">#</a></h2>
-<p>The <a class="reference external" href="https://www.cesm.ucar.edu/">Community Earth System Model (CESM)</a></p>
+<p>Another option is the the <a class="reference external" href="https://www.cesm.ucar.edu/">Community Earth System Model (CESM)</a>. CESM is a global climate model supported at NCAR and has multiple climate applications including common <a class="reference external" href="https://www.wcrp-climate.org/wgcm-cmip">CMIP type applications</a> as well as <a class="reference external" href="https://www.cesm.ucar.edu/working-groups/earth-system">as earth system prediction</a>. For the colloquium we will perform experiements in a simplified AMIP configuration that prescribe Sea Surface Temperatures and this focus primarily on the <a class="reference external" href="https://www.cesm.ucar.edu/models/cam">Community Atmosphere Model (CAM)</a>. In terms of representing boundary layer processes CAM uses the high order Cloud Layers Unified By Binormals (CLUBB) parameterization scheme. It is a somewhat complex scheme, but has numerous degrees of freedom that enable a wide variety of sensitivity experiments to be performed. If you are unfamiliar with CESM and are interested in using this model during the colloquium, please familiarize yourself as much as you can with the model <a class="reference external" href="https://www.cesm.ucar.edu/models/cam">here</a>. We will go over the fundamentals of running the model during the coloquium, but the <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/README.html">CESM Tutotial webages</a> will give you a more comprehensive workflows that the model uses. And finally if you are interested in an initial understanding of CLUBB</p>
 </div>
 <div class="section" id="weather-research-and-forecasting-model-wrf">
 <h2>Weather Research and Forecasting Model (WRF)<a class="headerlink" href="#weather-research-and-forecasting-model-wrf" title="Permalink to this headline">#</a></h2>
-<p>The <a class="reference external" href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting Model (WRF)</a></p>
+<p>For a more weather event based study exercise using the <a class="reference external" href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting Model (WRF)</a> will be available. WRF is a forecast capable model that can simulate past weather events over a limited area of the globe. Unlike CESM multiple boudary layer parameterization options are available which allows you to perform sensitivity experiments to investigate the assumptions use in different options and how they impact specific weather events.
+We will go over the fundamentals of running WRF in the collqouium, but feel free to familiarize yourself with methods for <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/">running WRF</a> in advance.</p>
 </div>
-<div class="section" id="class-models">
-<h2>CLASS Models<a class="headerlink" href="#class-models" title="Permalink to this headline">#</a></h2>
-</div>
-<div class="section" id="python-and-jupyterhub">
-<h2>Python and Jupyterhub<a class="headerlink" href="#python-and-jupyterhub" title="Permalink to this headline">#</a></h2>
+<div class="section" id="chemistry-land-surface-atmosphere-soil-slab-class-model">
+<h2>Chemistry Land-surface Atmosphere Soil Slab (CLASS) model<a class="headerlink" href="#chemistry-land-surface-atmosphere-soil-slab-class-model" title="Permalink to this headline">#</a></h2>
+<p>For a simpler model that has a focus more on chemical processes we will be using the <a class="reference external" href="https://classmodel.github.io/">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a>. CLASS is a model that can be downloaded and run easily on a laptop. The instructions for downloading onto a windows or mac system are <a class="reference external" href="https://github.com/classmodel/modelgui/releases">here</a>. A series of comprehensive introductory <a class="reference external" href="https://classmodel.github.io/clips.html">videos</a> can be viewed here. Try to download and have a play with the easy to use interface.</p>
 </div>
 </div>
 
@@ -465,11 +522,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-requirements-and-setup">Computing requirements and setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ncar-supercomputer-environment">NCAR Supercomputer Environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-material">Reading material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#presentations">Presentations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-earth-system-model-cesm">Community Earth System Model (CESM)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-research-and-forecasting-model-wrf">Weather Research and Forecasting Model (WRF)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#class-models">CLASS Models</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-jupyterhub">Python and Jupyterhub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chemistry-land-surface-atmosphere-soil-slab-class-model">Chemistry Land-surface Atmosphere Soil Slab (CLASS) model</a></li>
 </ul>
   </nav></div>
 
