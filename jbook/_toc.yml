@@ -3,18 +3,21 @@
 
 format: jb-book
 root: intro
+
 chapters:
-- file: information.md
-- file: before_arrival.md
+- file: information
+- file: before_arrival
 - file: schedule
 - file: presenters
 - file: students
 - file: exercises
   sections:
-  - file: exercises_cesm.md
-  - file: exercises_wrf.md
-  - file: exercises_class.md
-  - file: exercises_obs.md
-
+  - file: exercises_envs
+  - file: exercises_cesm
+  - file: exercises_wrf
+    sections:
+    - file: exercises_wrf_test
+  - file: exercises_class
+  - file: exercises_obs
 
 

@@ -3,8 +3,9 @@
 
 Welcome to the 2023 NCAR ASP Summer Colloquium. The colloquium is organized by the NCAR [Advanced Study Program](https://edec.ucar.edu/advanced-study-program/) and brings together an international group of graduate students and experts in the field to learn about a key topic in the atmopsheric science and climate community. This year's focus topic is **The Atmospheric Boundary Layer: Integrating Complexity Across Disciplines**. The goal is to create a unique experience for collaborative teaching, learning, the fostering of professional development and exposing students to NCAR and university research experiences.
 
+```{note}
 The 2-week colloquium activities will follow the general theme of morning presentations from experts in boundary layer research and a choice of project activities in the afternoons, related to small and large scale modeling, simpler models and observational analysis. Interspersed will be professional development activities aimed at equiping students for their graduate education and future career.
-
+```
 
 ## Contacts
 
