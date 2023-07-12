@@ -20,7 +20,7 @@ Below are the list of presenters confirmed for the colloquium.
 **Jakob Mann**, Technical University of Denmark (DTU) [email](mailto:mjmsq@dtu.dk) \
 **Brian Medeiros**, NCAR [email](mailto:brianpm@ucar.edu) \
 **Rich Neale**, NCAR [email](mailto:rneale@ucar.edu) \
-**Steve Oncley**, [email](mailto:oncley@ucar.edu) \
+**Steve Oncley**, NCAR [email](mailto:oncley@ucar.edu) \
 **Ned Patton**, NCAR [email](mailto:patton@ucar.edu) \
 **Ivana Stiperski**, University of Innsbruck [email](mailto:ivana.stiperski@uibk.ac.at) \
 **Gunilla Svenson**, Stockholm University [email](mailto:gunilla@misu.su.se) \

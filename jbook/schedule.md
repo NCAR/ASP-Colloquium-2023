@@ -84,7 +84,7 @@ Students Arrive in Boulder
 | 8:30-9:30  | **Gordon Bonan** <br/>   National Center for Atmospheric Research        | <span style="color:blue">**Land Surface Fluxes**</span>			|
 | 9:30-10:30 | **John Finnigan**  <br/> CSIRO, Australia    | 	<span style="color:blue">**Turbulence and Canopies** |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:30| **Ivana Stiperski** <br/> National Center for Atmospheric Research  		   |  	<span style="color:blue">**Turbulence Over Orography**</span>		||
+| 11:00-12:30| **Ivana Stiperski** <br/> University of Innsbruck	   |  	<span style="color:blue">**Turbulence Over Orography**</span>		||
 | 12:30-1:30 | *Lunch* 			 |  				||			
 | 1:30-5:00  | 	**Field Trip**  |			**[National Renewable Energy Laboratory](https://www.nrel.gov/about/golden.html), Golden CO**	||	
 | 5:15       | 		Shuttle to CU	   |				||	
@@ -104,7 +104,7 @@ Free time:
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Vince Larson** <br/> University Wisconsin, Madison      | <span style="color:blue">**High-Order Turbulence Modeling**</span>			|
-| 9:30-10:30 | **Pedro Jiminez**  <br/>  National Center for Atmospheric Research        | 	<span style="color:blue">**Boundary Layer Modeling**</span> |
+| 9:30-10:30 | **Pedro Jiminez Munoz**  <br/>  National Center for Atmospheric Research        | 	<span style="color:blue">**Boundary Layer Modeling**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Branko Kosovic** <br/> National Center for Atmospheric Research		   |  	<span style="color:blue">**Large Eddy Simulation**</span>			||
 | 12:30-1:30 | *Lunch (chat with speakers)* 			 |  				||			
@@ -118,12 +118,12 @@ Free time:
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
-| 8:30-9:30  | **Ian Faloona** <br/> UC Davis      | <span style="color:blue">**Turbulence and Chemistry**</span>			|
+| 8:30-9:30  | **Ian Faloona** <br/> UC Davis      | <span style="color:blue">**The Meso- to Micro-scale Meteorological Determinants of Atmospheric Chemistry**</span>			|
 | 9:30-10:30 | **Yang Li**  <br/>  Baylor University        | 	<span style="color:blue">**Chemistry and Boundary Layers**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Alma Hodzic** <br/> National Center for Atmospheric Research		   |  <span style="color:blue">**Modeling and Measurements of Aerosols in the Boundary Layer**</span>	||
 | 12:30-1:30 | *Lunch (chat with speakers)* 			 |  				||			
-| 1:30-3:00  | 	**In the Field Report** <br/> **Steve Oncley**<br/>*+*<br/> **Project Time**		   | 				||
+| 1:30-3:00  | 	**In the Field Report [M2HATS](https://www.eol.ucar.edu/field_projects/m2hats)** <br/> **Steve Oncley**<br/>*+*<br/> **Project Time**		   | 				||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Project Time**   |				||	
 | 5:15       | 		Shuttle to CU	   |				||	
