@@ -59,8 +59,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises_envs';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -166,7 +164,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Computing Environments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: East Coast Winter Storm of January 24-25, 2000</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -375,7 +373,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-your-supercomputing-environment">Establishing Your Supercomputing Environment</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-credentials">Login Credentials</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-setup">Software setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supercompter-communication-and-tansfers">Supercompter Communication and Tansfers</a></li>
 </ul>
 </li>
 </ul>
@@ -409,8 +406,11 @@ document.write(`
 <p>If you do not have <code class="docutils literal notranslate"><span class="pre">jupyterhub</span></code> installed on your laptop, use the <code class="docutils literal notranslate"><span class="pre">conda</span></code> mechanism to install the relevant packages. If you do not already have the conda package installed go to the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">conda download page</a> and follow the installation instructions.</p>
 <p>This will place minicoda in your <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> directory and all conda package installation will be located in
 <code class="docutils literal notranslate"><span class="pre">/users/$USER/miniconda3/bin</span></code> on a mac</p>
-<p>To make conda commands easy you may want to put the following search path to your<code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file in `<span class="math notranslate nohighlight">\(HOME'\
-export PATH=&quot;/Users/\)</span>USER/miniconda3/bin:$PATH”</p>
+<p>To make conda commands easy you may want to put the following search path to your<code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME
+export PATH=&quot;/Users/$USER/miniconda3/bin:$PATH&quot;
+</pre></div>
+</div>
 <p>Then use conda to <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html">install jupyterhub</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">jupyterlab</span>
 </pre></div>
@@ -423,7 +423,17 @@ export PATH=&quot;/Users/\)</span>USER/miniconda3/bin:$PATH”</p>
 </div>
 <div class="section" id="terminal">
 <h3>Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">#</a></h3>
-<p>An alternative approach to <code class="docutils literal notranslate"><span class="pre">conda</span></code> for command line operations and communication to Cheyenne is to use a terminal setup directly</p>
+<p>An alternative approach to <code class="docutils literal notranslate"><span class="pre">conda</span></code> for command line operations and communication to Cheyenne is to use a terminal setup directly and use ssh to connect to cheyenne (this will require DUO login)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh –XY [$USER]@cheyenne.ucar.edu
+
+</pre></div>
+</div>
+<p>For transfers from <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code> you can also <code class="docutils literal notranslate"><span class="pre">sftp</span></code> protocals for a single file or wildcard based copy</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sftp [$USER]@cheyenne.ucar.edu:/glade/work/$USER/ASP2023/file_to_copy .
+sftp &#39;[$USER]@cheyenne.ucar.edu:/glade/work/$USER/ASP2023/files_to_copy*&#39; .
+
+</pre></div>
+</div>
 <p>Useful software useful for projects would a text/file editor e.g., <a class="reference external" href="https://www.gnu.org/software/emacs/"><code class="docutils literal notranslate"><span class="pre">emacs</span></code></a> the netcdf file operators <a class="reference external" href="https://nco.sourceforge.net/"><code class="docutils literal notranslate"><span class="pre">nco</span></code></a>, a simple netcdf viewer either <a class="reference external" href="https://cirrus.ucsd.edu/ncview/"><code class="docutils literal notranslate"><span class="pre">ncview</span></code></a> or <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/"><code class="docutils literal notranslate"><span class="pre">panoply</span></code></a> and <a class="reference external" href="https://www.ncl.ucar.edu/"><code class="docutils literal notranslate"><span class="pre">ncl</span></code></a> an establshed analysis software for some simple plots</p>
 </div>
 </div>
@@ -449,8 +459,8 @@ export PATH=&quot;/Users/\)</span>USER/miniconda3/bin:$PATH”</p>
 <p>For easier navigation around your <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code> workspace in jupyterlab set up <em>symbolic links</em> to your work space (model cases direcories) and scratch space (model output directories).
 Unix commands for your home directory<br />
 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">$HOME</span></code><br />
-<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/work/$USER/</span> <span class="pre">work</span></code><br />
-<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/scratch/$USER</span> <span class="pre">scratch</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/work/$USER/work/ASP2023</span> <span class="pre">work</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/scratch/$USER/ASP2023</span> <span class="pre">scratch</span></code></p>
 </div>
 <p>For some code and data we will be using <code class="docutils literal notranslate"><span class="pre">git</span></code> and <code class="docutils literal notranslate"><span class="pre">github</span></code> - please make sure it is available and if not download using conda</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">git</span>
@@ -468,10 +478,6 @@ Unix commands for your home directory<br />
 
 </pre></div>
 </div>
-</div>
-<div class="section" id="supercompter-communication-and-tansfers">
-<h3>Supercompter Communication and Tansfers<a class="headerlink" href="#supercompter-communication-and-tansfers" title="Permalink to this headline">#</a></h3>
-<p>To log-on to <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code> you can use <code class="docutils literal notranslate"><span class="pre">ssh</span></code> (secure shell)</p>
 </div>
 </div>
 </div>
@@ -552,7 +558,6 @@ Unix commands for your home directory<br />
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-your-supercomputing-environment">Establishing Your Supercomputing Environment</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#login-credentials">Login Credentials</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-setup">Software setup</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supercompter-communication-and-tansfers">Supercompter Communication and Tansfers</a></li>
 </ul>
 </li>
 </ul>
