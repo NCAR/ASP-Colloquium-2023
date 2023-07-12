@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+    return loop.run_until_complete(inner)
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/rneale/miniconda3/envs/jbooks/lib/python3.9/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+Make a data directory (./DATA)
+	mkdir ~/WRF/DATA 
+Grab domain datasets for this case study
+	cp /glade/p/cgd/asp2017/WRF/JAN00_AWIP.tar.gz ~/WRF/DATA
+Unzip/untar
+	cd ~/WRF/DATA
+gzip -d JAN00_AWIP.tar.gz
+	tar -xvf JAN00_AWIP.tar -C ~/WRF/DATA 
+Quick checking/listing (from ~/WRF/WPS directory) - Of initial variables
+	./util/g1print.exe ../DATA/JAN00/2000012412.AWIPSF
+Data file linking 
+	ln -sf ungrib/Variable_Tables/Vtable.AWIP Vtable
+	./link_grib.csh ../DATA/JAN00/2000012
+Edit namelist for dating info. 		emacs namelist.wps
+	run_hours = 36	
+start_date = '2000-01-24_12:00:00',   
+	end_date = '2000-01-26_00:00:00',
+
+------------------
+
+
+[0;36m  Cell [0;32mIn[1], line 1[0;36m[0m
+[0;31m    Make a data directory (./DATA)[0m
+[0m         ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+

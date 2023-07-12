@@ -161,9 +161,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="presenters.html">Presenters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="students.html">Student Attendees</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="exercises.html">Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">CESM Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_wrf.html">WRF Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">CLASS Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_envs.html">Computing Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_obs.html">Observation Exercises</a></li>
 </ul>
 </li>
@@ -409,28 +413,36 @@ td,th {
 <td><p><em>Shuttle to NCAR</em></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p>8:30-9:30</p></td>
+<tr class="row-odd"><td><p>8:00-8:40</p></td>
+<td><p>Welcome from NCAR Leadership</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>8:40-9:30</p></td>
 <td><p><strong>Richard Neale</strong> <br/> National Center for Atmospheric Research</p></td>
-<td><p>Colloquium Introduction and Housekeeping <br/> (Welcome ASP/NCAR Leadership)</p></td>
+<td><p><span style="color:blue"><strong>Colloquium Introduction and Housekeeping</strong></span> <br/></p></td>
 </tr>
-<tr class="row-even"><td><p>9:30-10:30</p></td>
+<tr class="row-odd"><td><p>9:30-10:30</p></td>
 <td><p><strong>Ned Patton</strong>  <br/> National Center for Atmospheric Research</p></td>
-<td><p>Integrated View of the Boundary Layer</p></td>
+<td><p><span style="color:blue"><strong>Integrated View of the Boundary Layer</strong></span></p></td>
 </tr>
-<tr class="row-odd"><td><p>10:30-11:00</p></td>
+<tr class="row-even"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p>11:00-12:30</p></td>
+<tr class="row-odd"><td><p>11:00-12:30</p></td>
 <td><p><strong>Student lightning research talks</strong></p></td>
 <td><p>3 minute talks - 2 slides</p></td>
 </tr>
-<tr class="row-odd"><td><p>12:30-1:30</p></td>
+<tr class="row-even"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p>1:30-3:00</p></td>
+<tr class="row-odd"><td><p>1:30-3:00</p></td>
 <td><p><strong>CISL Computing Environment Configuration</strong></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p><strong>Project Time: WRF, CESM, CLASS and observations</strong></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p>3:00-3:30</p></td>
@@ -438,7 +450,7 @@ td,th {
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p>3:30-5:00</p></td>
-<td><p><strong>Project Time: Choice Between Observations, Simple Model, WRF and CESM</strong></p></td>
+<td><p><strong>Project Time: WRF</strong></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-odd"><td><p>5:15</p></td>
@@ -464,11 +476,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Sukanta Basu</strong> <br/> University at Albany</p></td>
-<td><p>Similarity theory</p></td>
+<td><p><span style="color:blue"><strong>Similarity theory</strong></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Jakob Mann</strong>  <br/> Technical University of Denmark</p></td>
-<td><p>Wind Energy Systems</p></td>
+<td><p><span style="color:blue"><strong>Wind Energy Systems</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -476,15 +488,15 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Paquita Zuidema</strong> <br/> University of Miami</p></td>
-<td><p><strong>Mixed-phase Microphysics in the Boundary Layer</strong></p></td>
+<td><p><span style="color:blue"><strong>Mixed-phase Microphysics in the Boundary Layer</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
-<td><p><em>Lunch</em></p></td>
+<td><p><em>Lunch (chat with speakers)</em></p></td>
 <td><p></p></td>
 </tr>
 <tr class="row-even"><td><p>1:30-3:00</p></td>
-<td><p><strong>Professional Development</strong></p></td>
-<td><p>TBD</p></td>
+<td><p><strong>Valeria Sloan</strong> <br/> Professional Development (NCAR)</p></td>
+<td><p><span style="color:blue"><strong>How to give a bad talk (and prepare a good one)</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>3:00-3:30</p></td>
 <td><p><em>Break</em></p></td>
@@ -517,11 +529,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Gunilla Svensson</strong> <br/> Stockholm University</p></td>
-<td><p>Momentum Observations in the Boundary Layer</p></td>
+<td><p><span style="color:blue"><strong>Momentum Observations in the Boundary Layer</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Julie Lunquist</strong>  <br/> University of Colorado/NREL</p></td>
-<td><p>Observations Wind and Terrain</p></td>
+<td><p><span style="color:blue"><strong>Observations Wind and Terrain</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -529,7 +541,7 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Steve Oncley</strong> <br/> National Center for Atmospheric Research</p></td>
-<td><p>Observations and Instrumentation</p></td>
+<td><p><span style="color:blue"><strong>Observations and Instrumentation</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
@@ -574,11 +586,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Michael Tjernstrom</strong> <br/> Stockholm University</p></td>
-<td><p>Arctic Boundary Layers</p></td>
+<td><p><span style="color:blue"><strong>Arctic Boundary Layers</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Brian Medeiros</strong>  <br/>  National Center for Atmospheric Research</p></td>
-<td><p>Boundary Layer Clouds</p></td>
+<td><p><span style="color:blue"><strong>Boundary Layer Clouds</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -586,7 +598,7 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Professional Development</strong></p></td>
-<td><p>Early Career Round Table</p></td>
+<td><p><span style="color:blue"><strong>Early Career Round Table</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
@@ -627,11 +639,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Gordon Bonan</strong> <br/>   National Center for Atmospheric Research</p></td>
-<td><p>Land surface fluxes</p></td>
+<td><p><span style="color:blue"><strong>Land Surface Fluxes</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>John Finnigan</strong>  <br/> CSIRO, Australia</p></td>
-<td><p>Turbulence and Canopies</p></td>
+<td><p><span style="color:blue"><strong>Turbulence and Canopies</strong></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -639,7 +651,7 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Ivana Stiperski</strong> <br/> National Center for Atmospheric Research</p></td>
-<td><p>Turbulence Over Orography</p></td>
+<td><p><span style="color:blue"><strong>Turbulence Over Orography</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
@@ -681,11 +693,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Vince Larson</strong> <br/> University Wisconsin, Madison</p></td>
-<td><p>High-Order Turbulence Modeling</p></td>
+<td><p><span style="color:blue"><strong>High-Order Turbulence Modeling</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Pedro Jiminez</strong>  <br/>  National Center for Atmospheric Research</p></td>
-<td><p>Boundary Layer Modeling</p></td>
+<td><p><span style="color:blue"><strong>Boundary Layer Modeling</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -693,7 +705,7 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Branko Kosovic</strong> <br/> National Center for Atmospheric Research</p></td>
-<td><p>Large Eddy Simulation</p></td>
+<td><p><span style="color:blue"><strong>Large Eddy Simulation</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
@@ -734,11 +746,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Ian Faloona</strong> <br/> UC Davis</p></td>
-<td><p>Turbulence and Chemistry</p></td>
+<td><p><span style="color:blue"><strong>Turbulence and Chemistry</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Yang Li</strong>  <br/>  Baylor University</p></td>
-<td><p>Chemistry and Boundary Layers</p></td>
+<td><p><span style="color:blue"><strong>Chemistry and Boundary Layers</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -746,7 +758,7 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Alma Hodzic</strong> <br/> National Center for Atmospheric Research</p></td>
-<td><p>Modeling and Measurements of Aerosols in the Boundary Layer</p></td>
+<td><p><span style="color:blue"><strong>Modeling and Measurements of Aerosols in the Boundary</strong> Layer</span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
@@ -787,11 +799,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Charlotte DeMott</strong> <br/> Colorado State University</p></td>
-<td><p>Air-Sea Interactions</p></td>
+<td><p><span style="color:blue"><strong>Air-Sea Interactions</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Dan Li</strong>  <br/>  Boston University</p></td>
-<td><p>Urban Influence in the Boundary Layer</p></td>
+<td><p><span style="color:blue"><strong>Urban Influence in the Boundary Layer</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -799,7 +811,7 @@ td,th {
 </tr>
 <tr class="row-even"><td><p>11:00-12:30</p></td>
 <td><p><strong>Ethan Guttman</strong> <br/> National Center for Atmospheric Research</p></td>
-<td><p>Snow Surfaces and Boundary Layers</p></td>
+<td><p><span style="color:blue"><strong>Snow Surfaces and Boundary Layers</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>12:30-1:30</p></td>
 <td><p><em>Lunch</em></p></td>
@@ -840,11 +852,11 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Elie Bou-Zeid</strong> <br/> Princeton</p></td>
-<td><p><strong>Beyond the textbook: Unsteady and baroclinic flow and turbulence in the ABL</strong></p></td>
+<td><p><span style="color:blue"><strong>Beyond the textbook: Unsteady and baroclinic flow and turbulence in the ABL</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Jessica Tomaszewski</strong>  <br/> REsurety</p></td>
-<td><p>Boundary Layers and Wind Resources</p></td>
+<td><p><span style="color:blue"><strong>Boundary Layers and Wind Resources</strong></span></p></td>
 </tr>
 <tr class="row-odd"><td><p>10:30-11:00</p></td>
 <td><p><em>Break</em></p></td>
@@ -893,7 +905,7 @@ td,th {
 </tr>
 <tr class="row-odd"><td><p>8:30-9:30</p></td>
 <td><p><strong>Julio Bacmeister</strong> <br/>  National Center for Atmospheric Research</p></td>
-<td><p>Boundary Layers and Applications</p></td>
+<td><p><span style="color:blue"><strong>Boundary Layers and Applications</strong></span></p></td>
 </tr>
 <tr class="row-even"><td><p>9:30-10:30</p></td>
 <td><p><strong>Project Time</strong></p></td>

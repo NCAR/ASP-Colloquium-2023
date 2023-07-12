@@ -11,19 +11,15 @@ The [Community Earth System Model (CESM)](https://www.cesm.ucar.edu/)
 
 
 
-## Weather Research and Forecasting Model (WRF)
+## Weather Research and Forecasting (WRF) model
 
 The [Weather Research and Forecasting Model (WRF)](https://www.mmm.ucar.edu/models/wrf)
 
 
 
-## CLASS Models
-
+## Chemistry Land-surface Atmosphere Soil Slab model (CLASS)
+The [Chemistry Land-surface Atmosphere Soil Slab model (CLASS)](https://classmodel.github.io/)
 
 ## Observations
 
 
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).

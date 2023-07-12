@@ -12,7 +12,7 @@ The colloquium will operate under the assumption that students have a working la
 
 Priority software that should be installed (or updated) and available on your laptop: 
 
-* Conda ([Download](https://docs.conda.io/en/latest/miniconda.html))
+* Conda ([Download](https://docs.conda.io/en/latest/miniconda.html): windows/mac/linux)
 	* This will allow us to a import and use a number of packages below, especially related to using python
 * [github](https://github.com/)
 	* github is a widely used code revision software for large code bases that are collaboratively developed 
@@ -48,7 +48,7 @@ There is a wide array of material available for learning about and understanding
 
 As a 'get to know everyone' on the first day of the colloquium (Monday 17th July, 11-12:30) we are asking each of you to give a 3 minute presnentation using 2 slides only. We would like you to spend the first slide talking generally about your graduate project (topic, hypotheses, key findings if you have them). Remember that each student is at a different  stage in their research, and it's not meeant to be a test in any way. For the 2nd slide we would like you to talk about a recent problem you had tried to address very recently (~weeks). You could have been successful or not at solving it! The aim is that students get a sense of other students' day to day activities. So think about the content and be sure to drop your slides in [this google drive]() that everyone should have access to. Email me if not!
 
-On the final afternoon (Friday, 28th July) we ask the students to give a 5-minute summary presentation of their findings from the research they worked on during the project time of the colloquium. The goal is not only to communicate your ideas but also stimulate conversation wih the rest of the group on how the research project could be carried forward. 
+On the final afternoon (Friday, 28th July) we ask the students to give a 5-minute summary presentation of their findings from the research they worked on during the project time of the colloquium. The goal is not only to communicate your ideas but also stimulate conversation wih the rest of the group on how the research project could be carried forward. There is a [student google folder]() available and we request that students upload their 'get to know everyone' slides (2 max) by the 16th July if possible.
 
 
 ## Community Earth System Model (CESM)

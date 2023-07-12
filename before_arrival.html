@@ -161,9 +161,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="presenters.html">Presenters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="students.html">Student Attendees</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="exercises.html">Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">CESM Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_wrf.html">WRF Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">CLASS Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_envs.html">Computing Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: East Coast Winter Storm of January 24-25, 2000</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_obs.html">Observation Exercises</a></li>
 </ul>
 </li>
@@ -268,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/before_arrival.md" target="_blank"
+      <li><a href="_sources/before_arrival.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -278,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -387,7 +391,7 @@ document.write(`
 <p>The colloquium will operate under the assumption that students have a working laptop available to them for the entire 2 week period. A mac or windows machine is preferable. The most recent updates of software should be applied where possible. Please contact <a class="reference external" href="mailto:rneale&#37;&#52;&#48;ucar&#46;edu">Rich Neale</a> as soon as possible if you are unable to provide a laptop of your own.</p>
 <p>Priority software that should be installed (or updated) and available on your laptop:</p>
 <ul class="simple">
-<li><p>Conda (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Download</a>)</p>
+<li><p>Conda (<a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Download</a>: windows/mac/linux)</p>
 <ul>
 <li><p>This will allow us to a import and use a number of packages below, especially related to using python</p></li>
 </ul>
@@ -438,7 +442,7 @@ document.write(`
 <div class="section" id="presentations">
 <h2>Presentations<a class="headerlink" href="#presentations" title="Permalink to this headline">#</a></h2>
 <p>As a ‘get to know everyone’ on the first day of the colloquium (Monday 17th July, 11-12:30) we are asking each of you to give a 3 minute presnentation using 2 slides only. We would like you to spend the first slide talking generally about your graduate project (topic, hypotheses, key findings if you have them). Remember that each student is at a different  stage in their research, and it’s not meeant to be a test in any way. For the 2nd slide we would like you to talk about a recent problem you had tried to address very recently (~weeks). You could have been successful or not at solving it! The aim is that students get a sense of other students’ day to day activities. So think about the content and be sure to drop your slides in <span class="xref myst">this google drive</span> that everyone should have access to. Email me if not!</p>
-<p>On the final afternoon (Friday, 28th July) we ask the students to give a 5-minute summary presentation of their findings from the research they worked on during the project time of the colloquium. The goal is not only to communicate your ideas but also stimulate conversation wih the rest of the group on how the research project could be carried forward.</p>
+<p>On the final afternoon (Friday, 28th July) we ask the students to give a 5-minute summary presentation of their findings from the research they worked on during the project time of the colloquium. The goal is not only to communicate your ideas but also stimulate conversation wih the rest of the group on how the research project could be carried forward. There is a <span class="xref myst">student google folder</span> available and we request that students upload their ‘get to know everyone’ slides (2 max) by the 16th July if possible.</p>
 </div>
 <div class="section" id="community-earth-system-model-cesm">
 <h2>Community Earth System Model (CESM)<a class="headerlink" href="#community-earth-system-model-cesm" title="Permalink to this headline">#</a></h2>
@@ -464,16 +468,16 @@ We will go over the fundamentals of running WRF in the collqouium, but feel free
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jbooks"
         },
         kernelOptions: {
-            name: "python3",
+            name: "jbooks",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jbooks'</script>
 
                 </article>
               

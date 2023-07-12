@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WRF Exercises &#8212; My sample book</title>
+    <title>Weather Research and Forecasting Model (WRF) &#8212; My sample book</title>
   
   
   
@@ -62,8 +62,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises_wrf';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="CLASS Exercises" href="exercises_class.html" />
-    <link rel="prev" title="CESM Exercises" href="exercises_cesm.html" />
+    <link rel="next" title="WRF Test Case Study: Major Snowstorm December 16-17, 2020" href="exercises_wrf_test.html" />
+    <link rel="prev" title="Community Earth System Model" href="exercises_cesm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -161,9 +161,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="presenters.html">Presenters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="students.html">Student Attendees</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="exercises.html">Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">CESM Exercises</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">WRF Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">CLASS Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_envs.html">Computing Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_obs.html">Observation Exercises</a></li>
 </ul>
 </li>
@@ -268,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/exercises_wrf.md" target="_blank"
+      <li><a href="_sources/exercises_wrf.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -278,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -350,7 +354,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>WRF Exercises</h1>
+    <h1>Weather Research and Forecasting Model (WRF)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -360,7 +364,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-research-and-forecasting-model-wrf">Weather Research and Forecasting Model (WRF)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-wrf-cases">Test Run of WRF Cases</a></li>
 </ul>
             </nav>
         </div>
@@ -372,12 +378,144 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="wrf-exercises">
-<h1>WRF Exercises<a class="headerlink" href="#wrf-exercises" title="Permalink to this headline">#</a></h1>
-<p>Not quite ready. Check back soon!</p>
-<div class="section" id="weather-research-and-forecasting-model-wrf">
-<h2>Weather Research and Forecasting Model (WRF)<a class="headerlink" href="#weather-research-and-forecasting-model-wrf" title="Permalink to this headline">#</a></h2>
-<p>The <a class="reference external" href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting Model (WRF)</a></p>
+  <div class="section" id="weather-research-and-forecasting-model-wrf">
+<h1><a class="reference external" href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting Model (WRF)</a><a class="headerlink" href="#weather-research-and-forecasting-model-wrf" title="Permalink to this headline">#</a></h1>
+<p>The aim of this notebook is to run WRF regional initialized simulations of two events that have specific boundary layer structures of interest</p>
+<div class="section" id="with-these-exercises-we-hope-for-you-to-achieve">
+<h2>With these exercises we hope for you to achieve<a class="headerlink" href="#with-these-exercises-we-hope-for-you-to-achieve" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>An understanding of the workflow for a weather forecast model</p></li>
+<li><p>The ability to perform basic sensitivity experiments</p></li>
+<li><p>An understanding of how boundary layer evolution maybe impact forecast evolution</p></li>
+<li><p>A baseline diagnosis of multiple WRF experiments</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To the greatest extent possible we will follow the <a class="reference external" href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting Model (WRF)</a> <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/index.html">users’ guide</a> for setting up, submitting, running and processing output from simulations.</p>
+</div>
+</div>
+<div class="section" id="description-of-model-cases-and-configurations">
+<h2>Description of Model Cases and Configurations<a class="headerlink" href="#description-of-model-cases-and-configurations" title="Permalink to this headline">#</a></h2>
+<p>While <code class="docutils literal notranslate"><span class="pre">WRF</span></code> is able to simulation weatehr events in a regional domain over much of the globe, we will limit our experiments, at least initially to 2 case studiesthat will hopefully illusttae teh role of boundary layer processes in the evolution of these events</p>
+</div>
+<div class="section" id="test-run-of-wrf-cases">
+<h2>Test Run of WRF Cases<a class="headerlink" href="#test-run-of-wrf-cases" title="Permalink to this headline">#</a></h2>
+<p>Please follow as closely as possible the test cases of the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/">WRF users’ guide</a>, the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/index.php">online tutorial</a> and the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php#STEP7">accompanying tutorial</a> guide as closely as possible. Additionaly, there are number of great pre-recorded lectures from the WRF in-person tutorial <a class="reference external" href="https://www.youtube.com/playlist?list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo">here</a>. If you are unfamliar with WRF, of particular interest will be the <a class="reference external" href="https://www.youtube.com/watch?v=wzSu-343b-0&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=2&amp;t=480s">Introduction to WRF</a>, <a class="reference external" href="https://www.youtube.com/watch?v=fIbg5T-aUM4&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=4&amp;pp=iAQB">Running the WPS system</a>, <a class="reference external" href="https://www.youtube.com/watch?v=yixvMF-g0nc&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=5&amp;pp=iAQB">Running WRF</a> and importantly to <a class="reference external" href="https://www.youtube.com/watch?v=NPsotmEqTBw&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=15&amp;t=183s">Boundary Layer Physics</a> and <a class="reference external" href="https://www.youtube.com/watch?v=NmjL6uxwOkQ">Surface Process</a> avalailable.</p>
+<p>Below is a condensed summary of the key steps</p>
+<ol class="arabic simple">
+<li><p>Download the WRF model code <a class="reference external" href="https://github.com/wrf-model/WRF"></a> and the WRF Pre-Processing System (WPS) code <a class="reference external" href="https://github.com/wrf-model/WRF/WPS"></a></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER
+git clone https://github.com/wrf-model/WRF
+git clone https://github.com/wrf-model/WPS
+</pre></div>
+</div>
+<p>We will return to teh WPS code later.</p>
+<ol class="arabic simple" start="2">
+<li><p>Change to (checkout) the current version (4.5) release branch</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">WRF</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">release</span><span class="o">-</span><span class="n">v4</span><span class="mf">.5.1</span>
+</pre></div>
+</div>
+<p>This now stages the code we need to use</p>
+<ol class="arabic simple" start="3">
+<li><p>Configure WRF</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span>
+</pre></div>
+</div>
+<p>You will be presented with options, so make the following choices.</p>
+<ul class="simple">
+<li><p>Choose option <strong>13</strong> for serial generic intel</p></li>
+<li><p>Then, choose option <strong>1</strong> for basic compile
+This then generates the <code class="docutils literal notranslate"><span class="pre">configure.wrf1</span></code> file if succesfull with the following end message</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*****************************************************************************</span>
+<span class="n">This</span> <span class="n">build</span> <span class="n">of</span> <span class="n">WRF</span> <span class="n">will</span> <span class="n">use</span> <span class="n">NETCDF4</span> <span class="k">with</span> <span class="n">HDF5</span> <span class="n">compression</span>
+<span class="o">*****************************************************************************</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Compile WPS
+Next compile from the right <em>real</em> case</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="n">case_name</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
+</pre></div>
+</div>
+<p>Choose a em_real e.g. <em>WRF_case00</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This compile can take up to 30 minutes so feel free to move onto some of the other project tasks in the mean time</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Check build
+When complete do a build check by viewing the end of the compile log file <code class="docutils literal notranslate"><span class="pre">log.compile</span></code></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<p>If the code compiled correctly near the end you should see</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span>                  <span class="n">Executables</span> <span class="n">successfully</span> <span class="n">built</span>                  <span class="o">&lt;---</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Code and executable check
+Once the compilation completes, to check whether it was successful, you need to look for executables in the <code class="docutils literal notranslate"><span class="pre">WRF/main</span></code> directory:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">ls</span> <span class="n">main</span><span class="o">/*.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>WPS code configure - more detailed description <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a>)
+Go to teh WPS code based and select the right code <em>branch</em></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/WPS
+git checkout release-v4.5
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Configure WPS
+As for WRF configure WPS ready for compilation</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span>
+</pre></div>
+</div>
+<p>You will be presented with options, so make the following choices.</p>
+<ul class="simple">
+<li><p>Choose <strong>17</strong> for serial compile on intel
+You should see a <code class="docutils literal notranslate"><span class="pre">configure.wps</span></code> file when this completes</p></li>
+</ul>
+<ol class="arabic simple" start="8">
+<li><p>Compile WPS</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="o">&gt;&amp;</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
+</pre></div>
+</div>
+<p>This should take much less take than WPS (a few minutes)</p>
+<p>If your compilation was successful, you should see these executables created (make sure they are not of size zero):\</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geogrid</span><span class="o">.</span><span class="n">exe</span><span class="p">,</span> <span class="n">ungrib</span><span class="o">.</span><span class="n">exe</span><span class="p">,</span> <span class="n">metgrid</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
+<p>If they are zero size type the following to see if there were errors output</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grep -i err compile.log`
+</pre></div>
+</div>
+<p>This should have completed your setup. To summarize this is the prestaging of code required for running WRF in the next step. It should not need to be repeated from now on, unless code is chnaged:
+<img alt="" src="_images/WRF_WPS_flow.png" /></p>
+<div class="admonition-summary-wrf-wps-workflow admonition">
+<p class="admonition-title">Summary WRF/WPS Workflow</p>
+<p><strong>WPS</strong><br />
+<code class="docutils literal notranslate"><span class="pre">geogrid.exe</span></code> -  creates terrestrial data (static).<br />
+<code class="docutils literal notranslate"><span class="pre">ungrib.exe</span></code> -  unpacks GRIB meteorological data and packs it into an intermediate file format.<br />
+<code class="docutils literal notranslate"><span class="pre">metgrid.exe</span></code> - interpolates the meteorological data horizontally onto your model domain (WRF input)<br />
+<strong>WRF</strong><br />
+<code class="docutils literal notranslate"><span class="pre">real.exe</span></code> - vertically interpolates the data onto the model coordinates.<br />
+<code class="docutils literal notranslate"><span class="pre">wrf.exe</span></code> - generates the model forecast.</p>
+</div>
+<p><strong>Now move on to running the <a class="reference internal" href="exercises_wrf_test.html"><span class="doc std std-doc">WRF control simulation</span></a></strong></p>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -390,16 +528,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jbooks"
         },
         kernelOptions: {
-            name: "python3",
+            name: "jbooks",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jbooks'</script>
 
                 </article>
               
@@ -418,15 +556,15 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CESM Exercises</p>
+        <p class="prev-next-title">Community Earth System Model</p>
       </div>
     </a>
     <a class="right-next"
-       href="exercises_class.html"
+       href="exercises_wrf_test.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CLASS Exercises</p>
+        <p class="prev-next-title">WRF Test Case Study: Major Snowstorm December 16-17, 2020</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -448,7 +586,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#weather-research-and-forecasting-model-wrf">Weather Research and Forecasting Model (WRF)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-wrf-cases">Test Run of WRF Cases</a></li>
 </ul>
   </nav></div>
 

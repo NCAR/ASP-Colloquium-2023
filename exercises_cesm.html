@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CESM Exercises &#8212; My sample book</title>
+    <title>Community Earth System Model &#8212; My sample book</title>
   
   
   
@@ -62,8 +62,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises_cesm';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="WRF Exercises" href="exercises_wrf.html" />
-    <link rel="prev" title="Exercises" href="exercises.html" />
+    <link rel="next" title="Weather Research and Forecasting Model (WRF)" href="exercises_wrf.html" />
+    <link rel="prev" title="Computing Environments" href="exercises_envs.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -161,9 +161,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="presenters.html">Presenters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="students.html">Student Attendees</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="exercises.html">Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">CESM Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_wrf.html">WRF Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">CLASS Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_envs.html">Computing Environments</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Community Earth System Model</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_obs.html">Observation Exercises</a></li>
 </ul>
 </li>
@@ -268,7 +272,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/exercises_cesm.md" target="_blank"
+      <li><a href="_sources/exercises_cesm.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -278,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -350,7 +354,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CESM Exercises</h1>
+    <h1>Community Earth System Model</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -360,7 +364,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-earth-system-model-cesm">Community Earth System Model (CESM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-cesm-cases">Test run of CESM cases</a></li>
 </ul>
             </nav>
         </div>
@@ -372,12 +378,79 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="cesm-exercises">
-<h1>CESM Exercises<a class="headerlink" href="#cesm-exercises" title="Permalink to this headline">#</a></h1>
-<p>Not quite ready. Check back soon!</p>
-<div class="section" id="community-earth-system-model-cesm">
-<h2>Community Earth System Model (CESM)<a class="headerlink" href="#community-earth-system-model-cesm" title="Permalink to this headline">#</a></h2>
-<p>The <a class="reference external" href="https://www.cesm.ucar.edu/">Community Earth System Model (CESM)</a></p>
+  <div class="section" id="community-earth-system-model">
+<h1><a class="reference external" href="https://www.cesm.ucar.edu/">Community Earth System Model</a><a class="headerlink" href="#community-earth-system-model" title="Permalink to this headline">#</a></h1>
+<p>The aim of this notebook is guide the creation, simulation and analyisis of CESM global, multi-annual simulations.</p>
+<div class="section" id="with-these-exercises-we-hope-for-you-to-achieve">
+<h2>With these exercises we hope for you to achieve<a class="headerlink" href="#with-these-exercises-we-hope-for-you-to-achieve" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>An understanding of the workflow for a climate model</p></li>
+<li><p>The ability to perform basic sensitivity experiments</p></li>
+<li><p>An understanding of how boundary layers vary in different climate regimes and how they may be sensitive to different boundary layer scheme formulations</p></li>
+<li><p>A baseline diagnosis of multiple CESM experiments</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To the greatest extent possible we will follow the <a class="reference external" href="https://github.com/NCAR/CESM-Tutorial">CESM tutorial workflows</a> for setting up, submitting, running and processing output from simulations.</p>
+</div>
+</div>
+<div class="section" id="description-of-model-cases-and-configurations">
+<h2>Description of Model Cases and Configurations<a class="headerlink" href="#description-of-model-cases-and-configurations" title="Permalink to this headline">#</a></h2>
+<p>The experiments we will perform with CESM will comprise an atmosphere model, land model and simplified (thermodynamic-only) sea-ice model over a global domain. An ocean model will not be used, instead being replace by fix or prescribed values of Sea Surface Temperature (SSTs). We will use a relatively course horizontal resolution, nomilly 2 degress in both latitude and longitude.</p>
+</div>
+<div class="section" id="test-run-of-cesm-cases">
+<h2>Test run of CESM cases<a class="headerlink" href="#test-run-of-cesm-cases" title="Permalink to this headline">#</a></h2>
+<p>Please follow the <code class="docutils literal notranslate"><span class="pre">basic</span></code> test cases from the CESM tutorial <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/basics/exercises/first_B1850.html">here</a>. These are a little different from what we wish to run: namely we will run F2000climo compsets: Atmopshere and land with fixed SST as described above. A summary of the steps with slight modification for our purposes follow.</p>
+<ol class="arabic simple">
+<li><p>Setup my workspace</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023
+mkdir cesm_cases
+mkdir cesm_code
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Download CESM code base using <code class="docutils literal notranslate"><span class="pre">git</span></code> and checkout the required code branch</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/cesm_code
+git clone https://github.com/ESCOMP/CESM.git my_cesm_code
+cd my_cesm_code
+git checkout release-cesm2.1.4
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Pull in external model code</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">manage_externals</span><span class="o">/</span><span class="n">checkout_externals</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Find the cesm scripts directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">cime</span><span class="o">/</span><span class="n">scripts</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Create a new case (experiment) with all the baseline information you need for a run with prescribed SSTs and year 2000 climatology (<code class="docutils literal notranslate"><span class="pre">COMPSET=F2000climo</span></code>) at a relatively course resolution of 2 degrees (<code class="docutils literal notranslate"><span class="pre">RES=f19_f19</span></code>). Maybe <code class="docutils literal notranslate"><span class="pre">CASE='cesm_control'</span></code>
+Therefore:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./create_newcase --case /glade/work/$USER/ASP2023/cesm_cases/cesm_control --res f19_f19 --compset F2000climo --run-unsupported -Project XXX
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The output will say the configuration is not supported, but it is fine for our use here.</p>
+</div>
+<p>Make sure you use the correct information for the CASE, RES, and COMPSET inputs.</p>
+<p>Did you set up the case?</p>
+<p>You can invoke case set up as follows:</p>
+<p>./case.setup
+How do I compile?</p>
+<p>You can compile with the command:</p>
+<p>qcmd – ./case.build
+How do I check my job status?</p>
+<p>You can check job status using the command:</p>
+<p>qstat -u $USER</p>
 </div>
 </div>
 
@@ -390,16 +463,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jbooks"
         },
         kernelOptions: {
-            name: "python3",
+            name: "jbooks",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jbooks'</script>
 
                 </article>
               
@@ -413,12 +486,12 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="exercises.html"
+       href="exercises_envs.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercises</p>
+        <p class="prev-next-title">Computing Environments</p>
       </div>
     </a>
     <a class="right-next"
@@ -426,7 +499,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">WRF Exercises</p>
+        <p class="prev-next-title">Weather Research and Forecasting Model (WRF)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -448,7 +521,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#community-earth-system-model-cesm">Community Earth System Model (CESM)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-cesm-cases">Test run of CESM cases</a></li>
 </ul>
   </nav></div>
 
