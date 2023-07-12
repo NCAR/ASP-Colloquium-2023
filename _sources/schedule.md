@@ -21,7 +21,7 @@ Students Arrive in Boulder
 | 8:40-9:30  | **Richard Neale** <br/> National Center for Atmospheric Research     | <span style="color:blue">**Colloquium Introduction and Housekeeping**</span> <br/> 		|
 | 9:30-10:30 | **Ned Patton**  <br/> National Center for Atmospheric Research          | 	<span style="color:blue">**Integrated View of the Boundary Layer**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:30| **Student lightning research talks**		   |		3 minute talks - 2 slides		||
+| 11:00-12:30| **Student lightning research talks**		   |		<span style="color:blue">**3 minute talks - 2 slides**</span>		||
 | 12:30-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	**CISL Computing Environment Configuration**		   |				||
 |            |  **Project Time: WRF, CESM, CLASS and observations** 
@@ -121,7 +121,7 @@ Free time:
 | 8:30-9:30  | **Ian Faloona** <br/> UC Davis      | <span style="color:blue">**Turbulence and Chemistry**</span>			|
 | 9:30-10:30 | **Yang Li**  <br/>  Baylor University        | 	<span style="color:blue">**Chemistry and Boundary Layers**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:30| **Alma Hodzic** <br/> National Center for Atmospheric Research		   |  <span style="color:blue">**Modeling and Measurements of Aerosols in the Boundary** Layer</span>	||
+| 11:00-12:30| **Alma Hodzic** <br/> National Center for Atmospheric Research		   |  <span style="color:blue">**Modeling and Measurements of Aerosols in the Boundary Layer**</span>	||
 | 12:30-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	**Project Time**		   | 				||
 | 3:00-3:30  | 	*Break* 		   |				||		
@@ -153,7 +153,7 @@ Free time:
 | 8:30-9:30  | **Elie Bou-Zeid** <br/> Princeton      |  <span style="color:blue">**Beyond the textbook: Unsteady and baroclinic flow and turbulence in the ABL**</span>		|
 | 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	<span style="color:blue">**Boundary Layers and Wind Resources**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:30| **Professional development**		   | Psychological Safety	||
+| 11:00-12:30| **Professional development**		   | <span style="color:blue">**Psychological Safety**</span>		||
 | 12:30-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	**Project Time**		   | 				||
 | 3:00-3:30  | 	*Break* 		   |				||		
@@ -170,7 +170,7 @@ Free time:
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Project time and talk preparation**		   | 	||
 | 12:30-1:30 | *Lunch* 			 |  				||			
-| 1:30-3:00  | 	**Student Presentations**		   |  5 mins each per group				||
+| 1:30-3:00  | 	**Student Presentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
 | 3:00-3:30  | 	*Break* 		   |				||		
-| 3:30-5:00  | 		**Student Presentations (continued)**   |				||	
+| 3:30-5:00  | 		**Student Presentations (continued)**   |		 <span style="color:blue">**5 mins each per group**</span>			||	
 | 5:15       | 		Shuttle to CU	   |				||	
