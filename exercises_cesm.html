@@ -368,7 +368,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-cesm-cases">Test run of CESM cases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-longer-run">Submit a Longer Run</a></li>
 </ul>
             </nav>
         </div>
@@ -433,10 +432,10 @@ git checkout release-cesm2.1.4
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>Create a new case (experiment) with all the baseline information you need for a run with prescribed SSTs and year 2000 climatology (<code class="docutils literal notranslate"><span class="pre">COMPSET=F2000climo</span></code>) at a relatively course resolution of 2 degrees (<code class="docutils literal notranslate"><span class="pre">RES=f19_f19</span></code>). Maybe <code class="docutils literal notranslate"><span class="pre">CASE='cesm_control'</span></code> (will refer to <code class="docutils literal notranslate"><span class="pre">$CASE</span></code> below)
+<li><p>Create a new case (experiment) with all the baseline information you need for a run with prescribed SSTs and year 2000 climatology (<code class="docutils literal notranslate"><span class="pre">COMPSET=F2000climo</span></code>) at a relatively course resolution of 2 degrees (<code class="docutils literal notranslate"><span class="pre">RES=f19_f19_mg17</span></code>). Maybe <code class="docutils literal notranslate"><span class="pre">CASE='cesm_control'</span></code> (will refer to <code class="docutils literal notranslate"><span class="pre">$CASE</span></code> below)
 Therefore:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./create_newcase --case /glade/work/$USER/ASP2023/cesm_cases/cesm_control --res f19_f19 --compset F2000climo --run-unsupported --project NASP0013
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./create_newcase --case /glade/work/$USER/ASP2023/cesm_cases/cesm_control --res f19_f19_mg17 --compset F2000climo --run-unsupported --project NASP0013
 </pre></div>
 </div>
 <div class="admonition note">
@@ -515,27 +514,48 @@ To see if the run finished successfully examine the tail of the run output file<
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MODEL</span> <span class="n">EXECUTION</span> <span class="n">HAS</span> <span class="n">FINISHED</span>
 </pre></div>
 </div>
-<p>If the run was successful.</p>
+<p>A quick check of you run directory will show you all the output that is produced from this experiment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/scratch/$USER/$CASE/run
+</pre></div>
+</div>
+<p>No output yet..</p>
+<p>If the run was successful then…</p>
 <ol class="arabic simple" start="9">
-<li></li>
+<li><p>Submit a Longer Run</p></li>
 </ol>
 <p>Again use the <code class="docutils literal notranslate"><span class="pre">xml</span></code> commands to query the <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">xml</span></code> files and change the values</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">xmlchange</span> <span class="n">STOP_OPTION</span><span class="o">=</span><span class="n">nmonths</span>
-<span class="o">./</span><span class="n">xmlchange</span> <span class="n">STOP_N</span><span class="o">=</span><span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/cesm_cases/$CASE
+./xmlchange STOP_OPTION=nmonths
+./xmlchange STOP_N=1
 </pre></div>
 </div>
 <p>This will run for 1 month. Now simply submit the job again.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">submit</span>
 </pre></div>
 </div>
-<p>If successful (see above method) then check the run directory for output files</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/scratch/$USER/$CASE/run
+<p>If successful (see above check method) then check the run directory for output files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/scratch/$USER/archive/$CASE/atm/hist
 </pre></div>
 </div>
-<p>The output or <code class="docutils literal notranslate"><span class="pre">history</span></code> files are</p>
+<p>The output or <code class="docutils literal notranslate"><span class="pre">history</span></code> files are moved here at the the end of each run and will have the form</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$CASE.cam.h0.0001.01.nc
+</pre></div>
 </div>
-<div class="section" id="submit-a-longer-run">
-<h2>Submit a Longer Run<a class="headerlink" href="#submit-a-longer-run" title="Permalink to this headline">#</a></h2>
+<p>This means that a <code class="docutils literal notranslate"><span class="pre">netcdf</span></code> file with monthly averaged data was produced for January in the first year of the run.
+Take a look at the contents</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ncdump -h $CASE.cam.h0.0001.01.nc | less
+</pre></div>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Submit a climate Run</p></li>
+</ol>
+<p>You are now ready to run a longer simulation for 3 years.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/cesm_cases/$CASE
+./xmlchange STOP_OPTION=nmonths
+./xmlchange STOP_N=36
+</pre></div>
+</div>
+<p>Repeat as above.</p>
 </div>
 </div>
 
@@ -609,7 +629,6 @@ To see if the run finished successfully examine the tail of the run output file<
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-cesm-cases">Test run of CESM cases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-longer-run">Submit a Longer Run</a></li>
 </ul>
   </nav></div>
 
