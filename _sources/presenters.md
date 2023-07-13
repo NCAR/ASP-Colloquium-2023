@@ -28,7 +28,20 @@ Below are the list of presenters confirmed for the colloquium.
 **Michael Tjernstrom**, Stockholm University [email](mailto:michaelt@misu.su.se) \
 **Pauita Zuidema**, University of Miami [email](mailto:pzuidema@miami.edu) 
 
+## Organizing Committee
 
+**Sukanta Basu**, Albany [email](mailto:sukanta.basu@gmail.com) \
+**Elie R. Bou-Zeid**, Princeton [email](mailto:ebouzeid@princeton.edu) \
+**Rich Neale**, NCAR [email](mailto:rneale@ucar.edu) \
+**Yang Li**, Baylor [email](mailto:yang_li3@baylor.edu) \
+
+
+## Local Organizers
+
+**Alma Hodzic**, NCAR [email](mailto:alma@ucar.edu) \
+**Branko Kosovic**, NCAR [email](mailto:branko@ucar.edu) \
+**Steve Oncley**, NCAR [email](mailto:oncley@ucar.edu) \
+**Ned Patton**, NCAR [email](mailto:patton@ucar.edu) \
 
 
 
