@@ -544,10 +544,17 @@ To see if the run finished successfully examine the tail of the run output file<
 <p>This means that a <code class="docutils literal notranslate"><span class="pre">netcdf</span></code> file with monthly averaged data was produced for January in the first year of the run.
 Take a look at the contents</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ncdump -h $CASE.cam.h0.0001.01.nc | less
+ncview $CASE.cam.h0.0001.01.nc
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plot the 2-m Temperature <code class="docutils literal notranslate"><span class="pre">TREFHT</span></code> and the boundary layer depth <code class="docutils literal notranslate"><span class="pre">PBLH</span></code>
+<img alt="" src="_images/cam_t2m.png" />
+<img alt="" src="_images/cam_pblh.png" /></p>
+</div>
 <ol class="arabic simple" start="10">
-<li><p>Submit a climate Run</p></li>
+<li><p>Submit a Climate Run</p></li>
 </ol>
 <p>You are now ready to run a longer simulation for 3 years.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/cesm_cases/$CASE
@@ -555,7 +562,7 @@ Take a look at the contents</p>
 ./xmlchange STOP_N=36
 </pre></div>
 </div>
-<p>Repeat as above.</p>
+<p>Repeat submission as above.</p>
 </div>
 </div>
 
