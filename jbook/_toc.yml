@@ -17,6 +17,7 @@ chapters:
   - file: exercises_wrf
     sections:
     - file: exercises_wrf_test
+    - file: exercises_wrf_sens
   - file: exercises_class
   - file: exercises_obs
 
