@@ -165,6 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Community Earth System Model</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -367,6 +368,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-cesm-cases">Test run of CESM cases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-longer-run">Submit a Longer Run</a></li>
 </ul>
             </nav>
         </div>
@@ -391,7 +393,7 @@ document.write(`
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>To the greatest extent possible we will follow the <a class="reference external" href="https://github.com/NCAR/CESM-Tutorial">CESM tutorial workflows</a> for setting up, submitting, running and processing output from simulations.</p>
+<p>To the greatest extent possible we will follow the <a class="reference external" href="https://github.com/NCAR/CESM-Tutorial">CESM tutorial</a> for setting up, submitting, running and processing output from simulations. In particular what follows below is a much abbreviated version of the more comprehensive (CESM workflow](<a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/basics/cesm_workflow.html">https://ncar.github.io/CESM-Tutorial/notebooks/basics/cesm_workflow.html</a>)</p>
 </div>
 </div>
 <div class="section" id="description-of-model-cases-and-configurations">
@@ -431,26 +433,109 @@ git checkout release-cesm2.1.4
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>Create a new case (experiment) with all the baseline information you need for a run with prescribed SSTs and year 2000 climatology (<code class="docutils literal notranslate"><span class="pre">COMPSET=F2000climo</span></code>) at a relatively course resolution of 2 degrees (<code class="docutils literal notranslate"><span class="pre">RES=f19_f19</span></code>). Maybe <code class="docutils literal notranslate"><span class="pre">CASE='cesm_control'</span></code>
+<li><p>Create a new case (experiment) with all the baseline information you need for a run with prescribed SSTs and year 2000 climatology (<code class="docutils literal notranslate"><span class="pre">COMPSET=F2000climo</span></code>) at a relatively course resolution of 2 degrees (<code class="docutils literal notranslate"><span class="pre">RES=f19_f19</span></code>). Maybe <code class="docutils literal notranslate"><span class="pre">CASE='cesm_control'</span></code> (will refer to <code class="docutils literal notranslate"><span class="pre">$CASE</span></code> below)
 Therefore:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./create_newcase --case /glade/work/$USER/ASP2023/cesm_cases/cesm_control --res f19_f19 --compset F2000climo --run-unsupported -Project XXX
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./create_newcase --case /glade/work/$USER/ASP2023/cesm_cases/cesm_control --res f19_f19 --compset F2000climo --run-unsupported --project NASP0013
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The output will say the configuration is not supported, but it is fine for our use here.</p>
+<p>The configuration is not officially supported, but it is fine for our use here.<br />
+The project code <code class="docutils literal notranslate"><span class="pre">NASP0013</span></code> is the ASP2023 computing account key that will be used for submitted CESM jobs. Type <code class="docutils literal notranslate"><span class="pre">groups</span></code> in a terminal to make sure you are part of this group.</p>
 </div>
-<p>Make sure you use the correct information for the CASE, RES, and COMPSET inputs.</p>
-<p>Did you set up the case?</p>
-<p>You can invoke case set up as follows:</p>
-<p>./case.setup
-How do I compile?</p>
-<p>You can compile with the command:</p>
-<p>qcmd – ./case.build
-How do I check my job status?</p>
-<p>You can check job status using the command:</p>
-<p>qstat -u $USER</p>
+<ol class="arabic simple" start="6">
+<li><p>Case directory
+This command should have a set up a series of scripts, files and directories in your <code class="docutils literal notranslate"><span class="pre">case</span></code> directory</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/cesm_cases/$CASE
+</pre></div>
+</div>
+<p>The experimental still requires the following default setup to be performed</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">setup</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Model build and compilation
+You main model build which, includes the <code class="docutils literal notranslate"><span class="pre">compile</span></code>, now needs to be performed. The <code class="docutils literal notranslate"><span class="pre">qcmd</span></code> indiactes that the task will be pushed of the <code class="docutils literal notranslate"><span class="pre">login</span></code> made you are currently working on, and submitted to a <code class="docutils literal notranslate"><span class="pre">compute</span></code> to avoid congestion on the often busy login nodes.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">build</span>
+</pre></div>
+</div>
+<p>The build will take around <strong>10 minutes</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can check job status using the command<br />
+<code class="docutils literal notranslate"><span class="pre">qstat</span> <span class="pre">-u</span> <span class="pre">$USER</span></code></p>
+</div>
+<p>If it completes with no errors, the last line of screen output should be</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MODEL</span> <span class="n">BUILD</span> <span class="n">HAS</span> <span class="n">FINISHED</span> <span class="n">SUCCESSFULLY</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p>Determine run length
+With the default setup you have built it is configured for a default run period of 5 days (very short). You can tell this by running<code class="docutils literal notranslate"><span class="pre">[xml]()</span></code> interogation scripts in the the case directory that operate on the xml files e.g.,<code class="docutils literal notranslate"><span class="pre">env_case.xml</span></code>. Try and poke around in these files as they contain parameters controling multiple aspects of the run configuration.</p></li>
+</ol>
+<p>Key variables for run length are STOP_N and STOP_OPTION. Find the descriptions with the following (from your case directory)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">xmlquery</span> <span class="o">--</span><span class="n">description</span> <span class="n">STOP_N</span>
+<span class="o">./</span><span class="n">xmlquery</span> <span class="o">--</span><span class="n">description</span> <span class="n">STOP_OPTION</span>
+
+<span class="o">./</span><span class="n">xmlquery</span> <span class="n">STOP_N</span>
+<span class="o">./</span><span class="n">xmlquery</span> <span class="n">STOP_OPTION</span>
+</pre></div>
+</div>
+<p>Hopefully it is straight forward from this information to determine that the model will run for 5 <code class="docutils literal notranslate"><span class="pre">=STOP_N</span></code> days <code class="docutils literal notranslate"><span class="pre">=STOP_OPTION</span></code>.
+This is the default setup so we don’t have to chnage anything else.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will be running for multiple years in your sensitivity experiments</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Submit a test run
+This short <code class="docutils literal notranslate"><span class="pre">out</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">box</span> <span class="pre">configuration</span></code> is ready to run.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">submit</span>
+</pre></div>
+</div>
+<p>If the submit is successful the last two lines of output should look something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Submitted</span> <span class="n">job</span> <span class="n">case</span><span class="o">.</span><span class="n">run</span> <span class="k">with</span> <span class="nb">id</span> <span class="mf">1988240.</span><span class="n">chadmin1</span><span class="o">.</span><span class="n">ib0</span><span class="o">.</span><span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+<span class="n">Submitted</span> <span class="n">job</span> <span class="n">case</span><span class="o">.</span><span class="n">st_archive</span> <span class="k">with</span> <span class="nb">id</span> <span class="mf">1988241.</span><span class="n">chadmin1</span><span class="o">.</span><span class="n">ib0</span><span class="o">.</span><span class="n">cheyenne</span><span class="o">.</span><span class="n">ucar</span><span class="o">.</span><span class="n">edu</span>
+</pre></div>
+</div>
+<p>These contain the job ids seprately for the model simulations <code class="docutils literal notranslate"><span class="pre">case.run</span></code> and for post completion data archiving <code class="docutils literal notranslate"><span class="pre">case.st_archive</span></code> and will help you idenitfy the jos when you query their status in the queue.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>./qstat -u $USER
+</pre></div>
+</div>
+<p>If you get in the queue this job should complete in a matter of minutes. When you query the queue and it lists the above job numbers still, the run is still in progress. If there is now output then the job may have <code class="docutils literal notranslate"><span class="pre">completed</span></code> or <code class="docutils literal notranslate"><span class="pre">crashed</span></code>.
+To see if the run finished successfully examine the tail of the run output file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="n">run</span><span class="o">.&lt;</span><span class="n">job</span> <span class="n">name</span><span class="o">&gt;.</span><span class="n">o</span><span class="o">&lt;</span><span class="n">job</span> <span class="nb">id</span> <span class="c1">#&gt; (e.g. like  run.cesm_control.o1988240&gt;</span>
+</pre></div>
+</div>
+<p>Near the end you should see</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MODEL</span> <span class="n">EXECUTION</span> <span class="n">HAS</span> <span class="n">FINISHED</span>
+</pre></div>
+</div>
+<p>If the run was successful.</p>
+<ol class="arabic simple" start="9">
+<li></li>
+</ol>
+<p>Again use the <code class="docutils literal notranslate"><span class="pre">xml</span></code> commands to query the <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">xml</span></code> files and change the values</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">xmlchange</span> <span class="n">STOP_OPTION</span><span class="o">=</span><span class="n">nmonths</span>
+<span class="o">./</span><span class="n">xmlchange</span> <span class="n">STOP_N</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>This will run for 1 month. Now simply submit the job again.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">case</span><span class="o">.</span><span class="n">submit</span>
+</pre></div>
+</div>
+<p>If successful (see above method) then check the run directory for output files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/scratch/$USER/$CASE/run
+</pre></div>
+</div>
+<p>The output or <code class="docutils literal notranslate"><span class="pre">history</span></code> files are</p>
+</div>
+<div class="section" id="submit-a-longer-run">
+<h2>Submit a Longer Run<a class="headerlink" href="#submit-a-longer-run" title="Permalink to this headline">#</a></h2>
 </div>
 </div>
 
@@ -524,6 +609,7 @@ How do I check my job status?</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#with-these-exercises-we-hope-for-you-to-achieve">With these exercises we hope for you to achieve</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description-of-model-cases-and-configurations">Description of Model Cases and Configurations</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-run-of-cesm-cases">Test run of CESM cases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submit-a-longer-run">Submit a Longer Run</a></li>
 </ul>
   </nav></div>
 

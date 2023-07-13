@@ -62,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises_wrf_test';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Chemistry Land-surface Atmosphere Soil Slab model (CLASS)" href="exercises_class.html" />
+    <link rel="next" title="WRF PBL Focused Sensiivtiy Experiments" href="exercises_wrf_sens.html" />
     <link rel="prev" title="Weather Research and Forecasting Model (WRF)" href="exercises_wrf.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -165,6 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -365,6 +366,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-model-domain-initialize">WPS: Model Domain Initialize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-grid-information">Generate grid information</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrf-running-the-model">WRF: Running the model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-experiments">Sensitivity Experiments</a></li>
 </ul>
@@ -382,13 +384,21 @@ document.write(`
 <h1>WRF Test Case Study: <a class="reference external" href="https://www.weather.gov/aly/Snow17Dec20">Major Snowstorm December 16-17, 2020</a><a class="headerlink" href="#wrf-test-case-study-major-snowstorm-december-16-17-2020" title="Permalink to this headline">#</a></h1>
 <div class="section" id="wps-model-domain-initialize">
 <h2>WPS: Model Domain Initialize<a class="headerlink" href="#wps-model-domain-initialize" title="Permalink to this headline">#</a></h2>
-<p>Detailed workflow <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a></p>
-<p>Generate Grid</p>
-<p>In ~/WRF/WPS directory. Edit namelist.wps</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">emacs</span> <span class="n">utils</span><span class="o">/</span><span class="n">namelist</span><span class="o">.</span><span class="n">wps</span> 
+<p>Detailed workflow <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a> <br />
+Summary workflow <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php">here</a></p>
+</div>
+<div class="section" id="generate-grid-information">
+<h2>Generate grid information<a class="headerlink" href="#generate-grid-information" title="Permalink to this headline">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Everytime <code class="docutils literal notranslate"><span class="pre">edit</span></code> is used in a command it implies you will use your chosen editing method. This could be via ‘jupyterhub or terminal-based editor such as <code class="docutils literal notranslate"><span class="pre">emacs</span></code></p>
+</div>
+<p>In WPS directory. Edit namelist.wps</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
+edit utils/namelist.wps 
 </pre></div>
 </div>
-<p>Change only to the following (mostly getting rid of 2nd number and a , at end of each line)</p>
+<p>Change the following lines only to the values shown (mostly getting rid of 2nd number and a <code class="docutils literal notranslate"><span class="pre">,</span></code> at end of each line)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_dom</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">parent_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
 <span class="n">parent_grid_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
@@ -481,7 +491,6 @@ And change the gravity wave drag option to gwd_opt=0 instead</p>
 </div>
 <div class="section" id="sensitivity-experiments">
 <h2>Sensitivity Experiments<a class="headerlink" href="#sensitivity-experiments" title="Permalink to this headline">#</a></h2>
-<p>Now that we have a control run of the WRF case study either you should invistigate the senistivity of aspects of the boundary layer to the forumation in the model. This could take the form of modifying parameters of the existing boundary layer, convection or surface flux parameterization. Or it could take the form of chnage the parameterization used entirely in the model. WRF has multiple parameterizations that can be used for the boundary layer, shallow convection, deep convection and surface fluxes. There are multiple configurations possible, not all of them will perform well for your case studies. Choose a particular change (1 process at a time) based on the different forumlation of the scheme you find most interesting and re-run your case studies as above.</p>
 </div>
 </div>
 
@@ -526,11 +535,11 @@ And change the gravity wave drag option to gwd_opt=0 instead</p>
       </div>
     </a>
     <a class="right-next"
-       href="exercises_class.html"
+       href="exercises_wrf_sens.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</p>
+        <p class="prev-next-title">WRF PBL Focused Sensiivtiy Experiments</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -553,6 +562,7 @@ And change the gravity wave drag option to gwd_opt=0 instead</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-model-domain-initialize">WPS: Model Domain Initialize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-grid-information">Generate grid information</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrf-running-the-model">WRF: Running the model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-experiments">Sensitivity Experiments</a></li>
 </ul>

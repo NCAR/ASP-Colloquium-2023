@@ -165,6 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -434,7 +435,7 @@ sftp &#39;[$USER]@cheyenne.ucar.edu:/glade/work/$USER/ASP2023/files_to_copy*&#39
 
 </pre></div>
 </div>
-<p>Useful software useful for projects would a text/file editor e.g., <a class="reference external" href="https://www.gnu.org/software/emacs/"><code class="docutils literal notranslate"><span class="pre">emacs</span></code></a> the netcdf file operators <a class="reference external" href="https://nco.sourceforge.net/"><code class="docutils literal notranslate"><span class="pre">nco</span></code></a>, a simple netcdf viewer either <a class="reference external" href="https://cirrus.ucsd.edu/ncview/"><code class="docutils literal notranslate"><span class="pre">ncview</span></code></a> or <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/"><code class="docutils literal notranslate"><span class="pre">panoply</span></code></a> and <a class="reference external" href="https://www.ncl.ucar.edu/"><code class="docutils literal notranslate"><span class="pre">ncl</span></code></a> an establshed analysis software for some simple plots</p>
+<p>Useful software useful for projects would be a text/file editor e.g., <a class="reference external" href="https://www.gnu.org/software/emacs/"><code class="docutils literal notranslate"><span class="pre">emacs</span></code></a> the netcdf file operators <a class="reference external" href="https://nco.sourceforge.net/"><code class="docutils literal notranslate"><span class="pre">nco</span></code></a>, a simple netcdf viewer either <a class="reference external" href="https://cirrus.ucsd.edu/ncview/"><code class="docutils literal notranslate"><span class="pre">ncview</span></code></a> or <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/"><code class="docutils literal notranslate"><span class="pre">panoply</span></code></a> and <a class="reference external" href="https://www.ncl.ucar.edu/"><code class="docutils literal notranslate"><span class="pre">ncl</span></code></a> an establshed analysis software for some simple plots. The CESM Tutorial webpage offers a comprehensive outline of software options <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/resources/resources_overview.html">here</a>.</p>
 </div>
 </div>
 <div class="section" id="establishing-your-supercomputing-environment">
@@ -458,12 +459,15 @@ sftp &#39;[$USER]@cheyenne.ucar.edu:/glade/work/$USER/ASP2023/files_to_copy*&#39
 <p class="admonition-title">Tip</p>
 <p>For easier navigation around your <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code> workspace in jupyterlab set up <em>symbolic links</em> to your work space (model cases direcories) and scratch space (model output directories).
 Unix commands for your home directory<br />
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">/glade/work/$USER/ASP2023</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">/glade/scratch/$USER/ASP2023</span></code><br />
 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">$HOME</span></code><br />
-<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/work/$USER/work/ASP2023</span> <span class="pre">work</span></code><br />
-<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/scratch/$USER/ASP2023</span> <span class="pre">scratch</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/work/$USER/</span> <span class="pre">work</span></code><br />
+<code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/glade/scratch/$USER/</span> <span class="pre">scratch</span></code></p>
 </div>
 <p>For some code and data we will be using <code class="docutils literal notranslate"><span class="pre">git</span></code> and <code class="docutils literal notranslate"><span class="pre">github</span></code> - please make sure it is available and if not download using conda</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="n">git</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">conda</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">git</span>
 </pre></div>
 </div>
 <p>Generally the syntax will be</p>
@@ -475,8 +479,11 @@ Unix commands for your home directory<br />
 <span class="n">module</span> <span class="n">load</span> <span class="n">nco</span>
 <span class="n">module</span> <span class="n">load</span> <span class="n">ncview</span>
 <span class="n">module</span> <span class="n">load</span> <span class="n">ncl</span>
-
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/resources/resources_overview.html">CESM tutorial webpage</a> provides a <code class="docutils literal notranslate"><span class="pre">comprehensive</span> <span class="pre">setup</span></code> for your environment (<code class="docutils literal notranslate"><span class="pre">.profile</span></code>,<code class="docutils literal notranslate"><span class="pre">.tshrc</span></code>) and a summary description of <code class="docutils literal notranslate"><span class="pre">software</span></code> that can be utilised during the colloquium.</p>
 </div>
 </div>
 </div>

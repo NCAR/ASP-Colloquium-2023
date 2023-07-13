@@ -57,7 +57,8 @@ Students Arrive in Boulder
 | 1:30-3:00  | 	**Introduction to Observations: Data and analysis**		   |				||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Project Time: Class and Observations**   |				||	
-| 5:15-8:15  | 		**Dinner and Games on the NCAR Tree Plaza**	   |				||	
+| 5:15-5:45  | 		**Patrick Veres** <br/> NCAR	   | <span style="color:blue">**Dinner Presentation:  Atmosphere/Ocean Interactions and Chemistry**</span> 				||	
+| 5:45-8:15  | 		**Dinner and Games on the NCAR Tree Plaza**	   |				||		
 | 8:15       | 		Shuttle to CU	   |				||	
 
 
@@ -137,7 +138,7 @@ Free time:
 | 8:30-9:30  | **Charlotte DeMott** <br/> Colorado State University      | <span style="color:blue">**Air-Sea Interactions**</span>			|
 | 9:30-10:30 | **Dan Li**  <br/>  Boston University        | 	<span style="color:blue">**Land-Atmosphere Feedbacks and Implications for Urban Heat and its Mitigation**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:00| **Ethan Guttman** <br/> National Center for Atmospheric Research		   | <span style="color:blue">**Snow Surfaces and Boundary Layers**</span>	||
+| 11:00-12:00| **Ethan Gutman** <br/> National Center for Atmospheric Research		   | <span style="color:blue">**Snow Surfaces and Boundary Layers**</span>	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	Adriana Medina <br/>Professional Development	   | <span style="color:blue">**Imlpicit Bias**</span>		||
 | 3:00-3:30  | 	*Break* 		   |				||		

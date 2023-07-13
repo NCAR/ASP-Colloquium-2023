@@ -165,6 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -401,7 +402,10 @@ document.write(`
 <div class="section" id="test-run-of-wrf-cases">
 <h2>Test Run of WRF Cases<a class="headerlink" href="#test-run-of-wrf-cases" title="Permalink to this headline">#</a></h2>
 <p>Please follow as closely as possible the test cases of the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/">WRF users’ guide</a>, the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/index.php">online tutorial</a> and the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php#STEP7">accompanying tutorial</a> guide as closely as possible. Additionaly, there are number of great pre-recorded lectures from the WRF in-person tutorial <a class="reference external" href="https://www.youtube.com/playlist?list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo">here</a>. If you are unfamliar with WRF, of particular interest will be the <a class="reference external" href="https://www.youtube.com/watch?v=wzSu-343b-0&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=2&amp;t=480s">Introduction to WRF</a>, <a class="reference external" href="https://www.youtube.com/watch?v=fIbg5T-aUM4&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=4&amp;pp=iAQB">Running the WPS system</a>, <a class="reference external" href="https://www.youtube.com/watch?v=yixvMF-g0nc&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=5&amp;pp=iAQB">Running WRF</a> and importantly to <a class="reference external" href="https://www.youtube.com/watch?v=NPsotmEqTBw&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=15&amp;t=183s">Boundary Layer Physics</a> and <a class="reference external" href="https://www.youtube.com/watch?v=NmjL6uxwOkQ">Surface Process</a> avalailable.</p>
-<p>Below is a condensed summary of the key steps</p>
+<p>Below is a condensed summary of the key steps. If you haven’t already create a ASP2023 wrok directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir /glade/work/$USER/ASP2023
+</pre></div>
+</div>
 <ol class="arabic simple">
 <li><p>Download the WRF model code <a class="reference external" href="https://github.com/wrf-model/WRF"></a> and the WRF Pre-Processing System (WPS) code <a class="reference external" href="https://github.com/wrf-model/WRF/WPS"></a></p></li>
 </ol>
@@ -410,7 +414,7 @@ git clone https://github.com/wrf-model/WRF
 git clone https://github.com/wrf-model/WPS
 </pre></div>
 </div>
-<p>We will return to teh WPS code later.</p>
+<p>We will return to the WPS code later.</p>
 <ol class="arabic simple" start="2">
 <li><p>Change to (checkout) the current version (4.5) release branch</p></li>
 </ol>
@@ -422,13 +426,14 @@ git clone https://github.com/wrf-model/WPS
 <ol class="arabic simple" start="3">
 <li><p>Configure WRF</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">WRF</span>
+<span class="o">./</span><span class="n">configure</span>
 </pre></div>
 </div>
 <p>You will be presented with options, so make the following choices.</p>
 <ul class="simple">
 <li><p>Choose option <strong>13</strong> for serial generic intel</p></li>
-<li><p>Then, choose option <strong>1</strong> for basic compile
+<li><p>Then, choose option <strong>0</strong> no nesting
 This then generates the <code class="docutils literal notranslate"><span class="pre">configure.wrf1</span></code> file if succesfull with the following end message</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*****************************************************************************</span>
@@ -437,68 +442,70 @@ This then generates the <code class="docutils literal notranslate"><span class="
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>Compile WPS
-Next compile from the right <em>real</em> case</p></li>
+<li><p>Compile WRF</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="n">case_name</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
+<p>Compoile WRF with the build typ is <code class="docutils literal notranslate"><span class="pre">em_real</span></code> to denote a real case study (as opposed to seomthing like <code class="docutils literal notranslate"><span class="pre">idealised</span></code>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="n">em_real</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
 </pre></div>
 </div>
-<p>Choose a em_real e.g. <em>WRF_case00</em></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This compile can take up to 30 minutes so feel free to move onto some of the other project tasks in the mean time</p>
+<p>This compile can take up to 30 minutes so feel free to move onto some of the other project tasks in the mean time. Maybe start thinking about <a class="reference internal" href="exercises_wrf_sens.html"><span class="doc std std-doc">WRF sensitivity</span></a> experiments or starting with the <a class="reference internal" href="exercises_class.html"><span class="doc std std-doc">CLASS set-up</span></a> if you haven’t already.</p>
 </div>
-<ol class="arabic simple" start="4">
+<ol class="arabic simple" start="5">
 <li><p>Check build
 When complete do a build check by viewing the end of the compile log file <code class="docutils literal notranslate"><span class="pre">log.compile</span></code></p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
 </pre></div>
 </div>
 <p>If the code compiled correctly near the end you should see</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span>                  <span class="n">Executables</span> <span class="n">successfully</span> <span class="n">built</span>                  <span class="o">&lt;---</span>
 </pre></div>
 </div>
-<ol class="arabic simple" start="5">
+<ol class="arabic simple" start="6">
 <li><p>Code and executable check
 Once the compilation completes, to check whether it was successful, you need to look for executables in the <code class="docutils literal notranslate"><span class="pre">WRF/main</span></code> directory:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">ls</span> <span class="n">main</span><span class="o">/*.</span><span class="n">exe</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="6">
-<li><p>WPS code configure - more detailed description <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a>)
-Go to teh WPS code based and select the right code <em>branch</em></p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/WPS
-git checkout release-v4.5
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">main</span><span class="o">/*.</span><span class="n">exe</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
+<li><p>WPS code configure - more detailed description <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a>)
+Go to the WPS code based and select the right code <em>branch</em></p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
+git checkout release-v4.5
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
 <li><p>Configure WPS
 As for WRF configure WPS ready for compilation</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span>
 </pre></div>
 </div>
-<p>You will be presented with options, so make the following choices.</p>
+<p>You will be presented with compile/platform options, so make the following choices.</p>
 <ul class="simple">
 <li><p>Choose <strong>17</strong> for serial compile on intel
 You should see a <code class="docutils literal notranslate"><span class="pre">configure.wps</span></code> file when this completes</p></li>
 </ul>
-<ol class="arabic simple" start="8">
+<ol class="arabic simple" start="9">
 <li><p>Compile WPS</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="o">&gt;&amp;</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
-<p>This should take much less take than WPS (a few minutes)</p>
-<p>If your compilation was successful, you should see these executables created (make sure they are not of size zero):\</p>
+<p>This should take much less take than WRF (a few minutes)</p>
+<p>If your compilation was successful, you should see these executables created (make sure they are not of size zero)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geogrid</span><span class="o">.</span><span class="n">exe</span><span class="p">,</span> <span class="n">ungrib</span><span class="o">.</span><span class="n">exe</span><span class="p">,</span> <span class="n">metgrid</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
-<p>If they are zero size type the following to see if there were errors output</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>grep -i err compile.log`
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If they are zero size type the following to see if there were errors output (i.e. does the ‘word’ error occur)</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">error</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
 <p>This should have completed your setup. To summarize this is the prestaging of code required for running WRF in the next step. It should not need to be repeated from now on, unless code is chnaged:
