@@ -171,7 +171,7 @@ Free time:
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Project time and presnetation preparation**		   | 	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
-| 1:30-3:00  | 	**Student Presentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
+| 1:30-3:00  | 	**Studdent Presentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Student Presentations (continued)**   |		 <span style="color:blue">**5 mins each per group**</span>			||	
 | 5:15       | 		Shuttle to CU	   |				||	
