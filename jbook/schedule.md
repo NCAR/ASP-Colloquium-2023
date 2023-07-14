@@ -152,7 +152,7 @@ Free time:
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Elie Bou-Zeid** <br/> Princeton      |  <span style="color:blue">**Beyond the textbook: Unsteady and Baroclinic Flow and Turbulence in the ABL**</span>		|
-| 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	<span style="color:blue">**Boundary Layers and Wind Resources**</span> |
+| 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	<span style="color:blue">**Renewable Energy in the Boundary Layer**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Rose Sentana** <br/>Professional Development		   | <span style="color:blue">**Social Media and Careers**</span>		||
 | 12:00-1:30 | *Lunch* 			 |  				||			

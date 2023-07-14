@@ -21,9 +21,8 @@
 **Lauren Pounds**, NOAA [email](mailto:lauren.pounds@noaa.gov)	 \
 **Muna Hafsah**, University of Delaware  [email](mailto:mhafsah@udel.edu)\
 **Qing Niu**, Oklahoma Unversity [email](mailto:qingniu@ou.edu)	 \
-**Yi-Shin Jang**, National University of Taiwan [email](mailto:D08229003@ntu.edu.tw)	\
 **Snigdha Samantaray**, University of Miami [email](mailto:sxs3853@miami.edu)	 \
 **Elise Legarth**, University of British Columbia, Canada [email](mailto:elegarth@eoas.ubc.ca)	 \
 **Marian de Orla-Barile**, UC Santa Barbara [email](mailto:mariandeorla-barile@ucsb.edu) \
 **Matthew Koszuta**, Oregan State University [email](mailto:koszutam@oregonstate.edu)
-
+**Mehtab Kan**, Technical University of Delft, Netherlands [email](mailto:m.a.khan-2@tudelft.nl)
