@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivtiy Experiments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -402,7 +402,7 @@ document.write(`
 <div class="section" id="test-run-of-wrf-cases">
 <h2>Test Run of WRF Cases<a class="headerlink" href="#test-run-of-wrf-cases" title="Permalink to this headline">#</a></h2>
 <p>Please follow as closely as possible the test cases of the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/">WRF users’ guide</a>, the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/index.php">online tutorial</a> and the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php#STEP7">accompanying tutorial</a> guide as closely as possible. Additionaly, there are number of great pre-recorded lectures from the WRF in-person tutorial <a class="reference external" href="https://www.youtube.com/playlist?list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo">here</a>. If you are unfamliar with WRF, of particular interest will be the <a class="reference external" href="https://www.youtube.com/watch?v=wzSu-343b-0&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=2&amp;t=480s">Introduction to WRF</a>, <a class="reference external" href="https://www.youtube.com/watch?v=fIbg5T-aUM4&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=4&amp;pp=iAQB">Running the WPS system</a>, <a class="reference external" href="https://www.youtube.com/watch?v=yixvMF-g0nc&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=5&amp;pp=iAQB">Running WRF</a> and importantly to <a class="reference external" href="https://www.youtube.com/watch?v=NPsotmEqTBw&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=15&amp;t=183s">Boundary Layer Physics</a> and <a class="reference external" href="https://www.youtube.com/watch?v=NmjL6uxwOkQ">Surface Process</a> avalailable.</p>
-<p>Below is a condensed summary of the key steps. If you haven’t already create a ASP2023 wrok directory</p>
+<p>Below is a condensed summary of the key steps. If you haven’t already create a ASP2023 work directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir /glade/work/$USER/ASP2023
 </pre></div>
 </div>
@@ -480,7 +480,7 @@ git checkout release-v4.5
 </div>
 <ol class="arabic simple" start="8">
 <li><p>Configure WPS
-As for WRF configure WPS ready for compilation</p></li>
+As for WRF, configure WPS to be ready for compilation</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span>
 </pre></div>
@@ -503,12 +503,12 @@ You should see a <code class="docutils literal notranslate"><span class="pre">co
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If they are zero size type the following to see if there were errors output (i.e. does the ‘word’ error occur)</p>
+<p>If they are zero size type the following to see if there were errors output (i.e. does the word ‘error’ occur)</p>
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">error</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
-<p>This should have completed your setup. To summarize this is the prestaging of code required for running WRF in the next step. It should not need to be repeated from now on, unless code is chnaged:
+<p>This should have completed your setup. To summarize, this is the prestaging of code required for running WRF. It should not need to be repeated from now on, unless code is changed:
 <img alt="" src="_images/WRF_WPS_flow.png" /></p>
 <div class="admonition-summary-wrf-wps-workflow admonition">
 <p class="admonition-title">Summary WRF/WPS Workflow</p>
@@ -520,7 +520,7 @@ You should see a <code class="docutils literal notranslate"><span class="pre">co
 <code class="docutils literal notranslate"><span class="pre">real.exe</span></code> - vertically interpolates the data onto the model coordinates.<br />
 <code class="docutils literal notranslate"><span class="pre">wrf.exe</span></code> - generates the model forecast.</p>
 </div>
-<p><strong>Now move on to running the <a class="reference internal" href="exercises_wrf_test.html"><span class="doc std std-doc">WRF control simulation</span></a></strong></p>
+<p><strong>Now move on to running the <a class="reference internal" href="exercises_wrf_test.html"><span class="doc std std-doc">WRF control simulation</span></a> which specifies the domain</strong></p>
 </div>
 <div class="toctree-wrapper compound">
 </div>

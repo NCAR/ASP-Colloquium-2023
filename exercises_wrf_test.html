@@ -62,7 +62,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'exercises_wrf_test';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="WRF PBL Focused Sensiivtiy Experiments" href="exercises_wrf_sens.html" />
+    <link rel="next" title="WRF PBL Focused Sensitivtiy Experiments" href="exercises_wrf_sens.html" />
     <link rel="prev" title="Weather Research and Forecasting Model (WRF)" href="exercises_wrf.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivtiy Experiments</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -366,7 +366,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-model-domain-initialize">WPS: Model Domain Initialize</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-grid-information">Generate grid information</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrf-running-the-model">WRF: Running the model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-experiments">Sensitivity Experiments</a></li>
 </ul>
@@ -386,27 +385,46 @@ document.write(`
 <h2>WPS: Model Domain Initialize<a class="headerlink" href="#wps-model-domain-initialize" title="Permalink to this headline">#</a></h2>
 <p>Detailed workflow <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a> <br />
 Summary workflow <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php">here</a></p>
-</div>
-<div class="section" id="generate-grid-information">
-<h2>Generate grid information<a class="headerlink" href="#generate-grid-information" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Generate grid information</p></li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Everytime <code class="docutils literal notranslate"><span class="pre">edit</span></code> is used in a command it implies you will use your chosen editing method. This could be via ‘jupyterhub or terminal-based editor such as <code class="docutils literal notranslate"><span class="pre">emacs</span></code></p>
 </div>
 <p>In WPS directory. Edit namelist.wps</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
-edit utils/namelist.wps 
+edit namelist.wps 
 </pre></div>
 </div>
-<p>Change the following lines only to the values shown (mostly getting rid of 2nd number and a <code class="docutils literal notranslate"><span class="pre">,</span></code> at end of each line)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_dom</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">parent_id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
-<span class="n">parent_grid_ratio</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
-<span class="n">i_parent_start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
-<span class="n">j_parent_start</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
-<span class="n">e_we</span> <span class="o">=</span> <span class="mi">74</span><span class="p">,</span> 
-<span class="n">e_sn</span> <span class="o">=</span> <span class="mi">61</span><span class="p">,</span> 
-<span class="n">geog_data_res</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>
+<p>Change the following lines only to the values shown (mostly getting rid of 2nd number and a <code class="docutils literal notranslate"><span class="pre">,</span></code> at end of each line).
+This locates the domain over the -79W,41E. Approximately the center of action for the storm.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&amp;</span><span class="n">share</span>
+ <span class="n">wrf_core</span> <span class="o">=</span> <span class="s1">&#39;ARW&#39;</span><span class="p">,</span>
+ <span class="n">max_dom</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="n">start_date</span> <span class="o">=</span> <span class="s1">&#39;2020-12-15_00:00:00&#39;</span><span class="p">,</span>
+ <span class="n">end_date</span>   <span class="o">=</span> <span class="s1">&#39;2020-12-17_18:00:00&#39;</span><span class="p">,</span>
+ <span class="n">interval_seconds</span> <span class="o">=</span> <span class="mi">10800</span>
+<span class="o">/</span>
+
+<span class="o">&amp;</span><span class="n">geogrid</span>
+ <span class="n">parent_id</span>         <span class="o">=</span>   <span class="mi">1</span><span class="p">,</span>   
+ <span class="n">parent_grid_ratio</span> <span class="o">=</span>   <span class="mi">1</span><span class="p">,</span>   
+ <span class="n">i_parent_start</span>    <span class="o">=</span>   <span class="mi">1</span><span class="p">,</span>  
+ <span class="n">j_parent_start</span>    <span class="o">=</span>   <span class="mi">1</span><span class="p">,</span> 
+ <span class="n">e_we</span>              <span class="o">=</span>  <span class="mi">100</span><span class="p">,</span>
+ <span class="n">e_sn</span>              <span class="o">=</span>  <span class="mi">80</span><span class="p">,</span> 
+ <span class="n">geog_data_res</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>
+ <span class="n">dx</span> <span class="o">=</span> <span class="mi">15000</span><span class="p">,</span>
+ <span class="n">dy</span> <span class="o">=</span> <span class="mi">15000</span><span class="p">,</span>
+ <span class="n">map_proj</span> <span class="o">=</span> <span class="s1">&#39;lambert&#39;</span><span class="p">,</span>
+ <span class="n">ref_lat</span>   <span class="o">=</span>  <span class="mf">41.00</span><span class="p">,</span>
+ <span class="n">ref_lon</span>   <span class="o">=</span> <span class="o">-</span><span class="mf">76.00</span><span class="p">,</span>
+ <span class="n">truelat1</span>  <span class="o">=</span>  <span class="mf">30.0</span><span class="p">,</span>
+ <span class="n">truelat2</span>  <span class="o">=</span>  <span class="mf">60.0</span><span class="p">,</span>
+ <span class="n">stand_lon</span> <span class="o">=</span> <span class="o">-</span><span class="mf">79.0</span><span class="p">,</span>
+ <span class="n">geog_data_path</span> <span class="o">=</span> <span class="s1">&#39;/glade/work/wrfhelp/WPS_GEOG/&#39;</span>
+<span class="o">/</span>
 </pre></div>
 </div>
 <p>Plot domain grid (requires a simple <a class="reference external" href="https://www.ncl.ucar.edu">ncl</a> command and a module load if not currently installed))</p>
@@ -415,7 +433,7 @@ edit utils/namelist.wps
 </pre></div>
 </div>
 <p>View created image file <code class="docutils literal notranslate"><span class="pre">wps_show_dom.png</span></code> in jupyterhub</p>
-<p>Generate surface data for this domain (takes 1 minute)</p>
+<p>Generate surface data for this domain (takes a few minutes)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">geogrid</span><span class="o">.</span><span class="n">exe</span>	
 </pre></div>
 </div>
@@ -423,8 +441,11 @@ edit utils/namelist.wps
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!  Successful completion of geogrid.        !
 </pre></div>
 </div>
-<p>Data should be in <code class="docutils literal notranslate"><span class="pre">geo_em.d01.nc</span></code> (check it exists)
-Browse data (should for the most part be obviously SE USA)</p>
+<ol class="arabic simple" start="2">
+<li><p>Check generated grid data
+Data should be in <code class="docutils literal notranslate"><span class="pre">geo_em.d01.nc</span></code> (check it exists)
+Browse data (should for the most part be obviously North East USA)</p></li>
+</ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncview</span> <span class="n">geo_em</span><span class="o">.</span><span class="n">d01</span><span class="o">.</span><span class="n">nc</span>
 </pre></div>
 </div>
@@ -432,34 +453,40 @@ Browse data (should for the most part be obviously SE USA)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncdump</span> <span class="o">-</span><span class="n">h</span> <span class="n">geo_em</span><span class="o">.</span><span class="n">d01</span><span class="o">.</span><span class="n">nc</span> <span class="o">|</span> <span class="n">less</span>
 </pre></div>
 </div>
-<p>Make a data directory (./DATA)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">WRF</span><span class="o">/</span><span class="n">DATA</span> 
+<ol class="arabic simple" start="3">
+<li><p>Grab domain datasets for this case study (Run WPS)</p></li>
+</ol>
+<p>Raw grib files (GFS) used to initialize WRF forecasts can be found <a class="reference external" href="https://rda.ucar.edu/datasets/ds084.1/">here</a>. If a different time period is needed then additional data has to be processed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Data needed to run this case study can be found here:
+`/glade/scratch/rneale/GFS/’</p>
+</div>
+<p>With the changes to <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> run WPS to set up processing of meteorology fields for initial and boundary forcing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
+./link_grib.csh /glade/scratch/rneale/GFS/asp1/
 </pre></div>
 </div>
-<p>Grab domain datasets for this case study</p>
-<p>Raw grib files used to initialize WRF forecasts are used <a class="reference external" href="https://rda.ucar.edu/datasets/ds084.1/">here</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">p</span><span class="o">/</span><span class="n">cgd</span><span class="o">/</span><span class="n">asp2017</span><span class="o">/</span><span class="n">WRF</span><span class="o">/</span><span class="n">JAN00_AWIP</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="o">~/</span><span class="n">WRF</span><span class="o">/</span><span class="n">DATA</span>
+<p>Then link to the correct Vtable (GFS, for this case):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="n">ungrib</span><span class="o">/</span><span class="n">Variable_Tables</span><span class="o">/</span><span class="n">Vtable</span><span class="o">.</span><span class="n">GFS</span> <span class="n">Vtable</span>
 </pre></div>
 </div>
-<p>Unzip/untar</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">WRF</span><span class="o">/</span><span class="n">DATA</span>
-<span class="n">gzip</span> <span class="o">-</span><span class="n">d</span> <span class="n">JAN00_AWIP</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">tar</span> <span class="o">-</span><span class="n">xvf</span> <span class="n">JAN00_AWIP</span><span class="o">.</span><span class="n">tar</span> <span class="o">-</span><span class="n">C</span> <span class="o">~/</span><span class="n">WRF</span><span class="o">/</span><span class="n">DATA</span> 
+<p>Then run the <code class="docutils literal notranslate"><span class="pre">ungrib</span></code> executable. Ungrib translates the raw GRIB files from GFS so tha <code class="docutils literal notranslate"><span class="pre">metgrid</span></code> can perform required interpolation to the model domain</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell here may lead to problems. Try switching to <code class="docutils literal notranslate"><span class="pre">csh</span></code> if that’s the case.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ungrib</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
-<p>Quick checking/listing (from ~/WRF/WPS directory) - Of initial variables</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">util</span><span class="o">/</span><span class="n">g1print</span><span class="o">.</span><span class="n">exe</span> <span class="o">../</span><span class="n">DATA</span><span class="o">/</span><span class="n">JAN00</span><span class="o">/</span><span class="mf">2000012412.</span><span class="n">AWIPSF</span>
+<p>The extensive output from running this command details the available data variables and levels used for interpolation.
+Look for:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!  Successful completion of ungrib.   !
 </pre></div>
 </div>
-<p>Data file linking</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="n">ungrib</span><span class="o">/</span><span class="n">Variable_Tables</span><span class="o">/</span><span class="n">Vtable</span><span class="o">.</span><span class="n">AWIP</span> <span class="n">Vtable</span>
-<span class="o">./</span><span class="n">link_grib</span><span class="o">.</span><span class="n">csh</span> <span class="o">../</span><span class="n">DATA</span><span class="o">/</span><span class="n">JAN00</span><span class="o">/</span><span class="mi">2000012</span>
-</pre></div>
-</div>
-<p>Edit namelist for dating info. 		emacs namelist.wps</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">run_hours</span> <span class="o">=</span> <span class="mi">36</span>	
-<span class="n">start_date</span> <span class="o">=</span> <span class="s1">&#39;2000-01-24_12:00:00&#39;</span><span class="p">,</span>   
-<span class="n">end_date</span> <span class="o">=</span> <span class="s1">&#39;2000-01-26_00:00:00&#39;</span><span class="p">,</span>
+<p><code class="docutils literal notranslate"><span class="pre">Ugrib</span></code> produces a number of local files e.g. <code class="docutils literal notranslate"><span class="pre">FILE:2020-12-15_00</span></code> which are prestaged for WRF to be run.</p>
+<p>Finally for data preparation for WRF is interpolation performed in `metgrid’</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -539,7 +566,7 @@ And change the gravity wave drag option to gwd_opt=0 instead</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">WRF PBL Focused Sensiivtiy Experiments</p>
+        <p class="prev-next-title">WRF PBL Focused Sensitivtiy Experiments</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -562,7 +589,6 @@ And change the gravity wave drag option to gwd_opt=0 instead</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-model-domain-initialize">WPS: Model Domain Initialize</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-grid-information">Generate grid information</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrf-running-the-model">WRF: Running the model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-experiments">Sensitivity Experiments</a></li>
 </ul>
