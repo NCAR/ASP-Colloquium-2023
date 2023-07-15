@@ -510,6 +510,10 @@ Look for:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="o">../../</span><span class="n">WPS</span><span class="o">/</span><span class="n">met_em</span><span class="o">.</span><span class="n">d01</span><span class="mf">.2020</span><span class="o">-</span><span class="mi">12</span><span class="o">*</span> <span class="o">.</span>
 </pre></div>
 </div>
+<p>or</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="o">../../../</span><span class="n">WPS</span><span class="o">/</span><span class="n">met_em</span><span class="o">.</span><span class="n">d01</span><span class="mf">.2020</span><span class="o">-</span><span class="mi">12</span><span class="o">*</span> <span class="o">.</span>
+</pre></div>
+</div>
 <p>Look over namelist, make sure it reflects the period of the</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edit</span> <span class="n">namelist</span><span class="o">.</span><span class="n">input</span> 
 </pre></div>
@@ -532,15 +536,16 @@ Make sure you change:
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">test</span><span class="o">/</span><span class="n">em_real</span><span class="o">/</span>
 </pre></div>
 </div>
-<p>You should see hourly <code class="docutils literal notranslate"><span class="pre">wrfout</span></code> files from <code class="docutils literal notranslate"><span class="pre">2020-12-15</span></code> through <code class="docutils literal notranslate"><span class="pre">2020-12-17</span></code> similar to</p>
+<p>You should see hourly <code class="docutils literal notranslate"><span class="pre">wrfout</span></code> files as the model runs from <code class="docutils literal notranslate"><span class="pre">2020-12-15</span></code> through <code class="docutils literal notranslate"><span class="pre">2020-12-17</span></code> similar to</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wrfout_d01_2020</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">15_00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
 </pre></div>
 </div>
+<p>When run on a compute node the simulations hopefully takes around 30 minutes to complete</p>
 <ol class="arabic simple" start="5">
 <li><p>Simple analysis of the output</p></li>
 </ol>
 <p>OK let’s take a look inside these with one of the notebooks.
-Make a new <code class="docutils literal notranslate"><span class="pre">diagnsotics</span></code> directory</p>
+Make a new <code class="docutils literal notranslate"><span class="pre">diagnostics</span></code> directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir /glade/work/$USER/ASP2023/diags
 </pre></div>
 </div>
