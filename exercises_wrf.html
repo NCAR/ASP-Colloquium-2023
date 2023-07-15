@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivtiy Experiments</a></li>
+
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -402,6 +403,10 @@ document.write(`
 <div class="section" id="test-run-of-wrf-cases">
 <h2>Test Run of WRF Cases<a class="headerlink" href="#test-run-of-wrf-cases" title="Permalink to this headline">#</a></h2>
 <p>Please follow as closely as possible the test cases of the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/">WRF users’ guide</a>, the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/index.php">online tutorial</a> and the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/OnLineTutorial/compilation_tutorial.php#STEP7">accompanying tutorial</a> guide as closely as possible. Additionaly, there are number of great pre-recorded lectures from the WRF in-person tutorial <a class="reference external" href="https://www.youtube.com/playlist?list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo">here</a>. If you are unfamliar with WRF, of particular interest will be the <a class="reference external" href="https://www.youtube.com/watch?v=wzSu-343b-0&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=2&amp;t=480s">Introduction to WRF</a>, <a class="reference external" href="https://www.youtube.com/watch?v=fIbg5T-aUM4&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=4&amp;pp=iAQB">Running the WPS system</a>, <a class="reference external" href="https://www.youtube.com/watch?v=yixvMF-g0nc&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=5&amp;pp=iAQB">Running WRF</a> and importantly to <a class="reference external" href="https://www.youtube.com/watch?v=NPsotmEqTBw&amp;list=PLJ_1sjucSSZCTNBRM4D3BfEak-XT7TKJo&amp;index=15&amp;t=183s">Boundary Layer Physics</a> and <a class="reference external" href="https://www.youtube.com/watch?v=NmjL6uxwOkQ">Surface Process</a> avalailable.</p>
+<p>If you are not currently on <code class="docutils literal notranslate"><span class="pre">Cheyenne</span></code> then login. The model will not compile and run properly on <code class="docutils literal notranslate"><span class="pre">Casper</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh -XY $USER@cheyenne.ucar.edu
+</pre></div>
+</div>
 <p>Below is a condensed summary of the key steps. If you haven’t already create a ASP2023 work directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir /glade/work/$USER/ASP2023
 </pre></div>
@@ -426,14 +431,13 @@ git clone https://github.com/wrf-model/WPS
 <ol class="arabic simple" start="3">
 <li><p>Configure WRF</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">WRF</span>
-<span class="o">./</span><span class="n">configure</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">configure</span>
 </pre></div>
 </div>
 <p>You will be presented with options, so make the following choices.</p>
 <ul class="simple">
 <li><p>Choose option <strong>13</strong> for serial generic intel</p></li>
-<li><p>Then, choose option <strong>0</strong> no nesting
+<li><p>Then, choose option <strong>1</strong> basic nesting
 This then generates the <code class="docutils literal notranslate"><span class="pre">configure.wrf1</span></code> file if succesfull with the following end message</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*****************************************************************************</span>
@@ -444,10 +448,17 @@ This then generates the <code class="docutils literal notranslate"><span class="
 <ol class="arabic simple" start="4">
 <li><p>Compile WRF</p></li>
 </ol>
-<p>Compoile WRF with the build typ is <code class="docutils literal notranslate"><span class="pre">em_real</span></code> to denote a real case study (as opposed to seomthing like <code class="docutils literal notranslate"><span class="pre">idealised</span></code>)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="n">em_real</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
+<p>Compile WRF where the build type is <code class="docutils literal notranslate"><span class="pre">em_real</span></code> to denote a real case study (as opposed to seomthing like <code class="docutils literal notranslate"><span class="pre">idealised</span></code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Below commands starting with <code class="docutils literal notranslate"><span class="pre">qcmd</span></code> push the work to a separate <code class="docutils literal notranslate"><span class="pre">compute</span> <span class="pre">node</span></code> to avoid congestion on the <code class="docutils literal notranslate"><span class="pre">login</span> <span class="pre">nodes</span></code></p>
+</div>
+<p>Need to do a small code grab first and then compile</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">phys</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">submodules</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">..</span>
+<span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="nb">compile</span> <span class="o">-</span><span class="n">j</span> <span class="mi">8</span> <span class="n">em_real</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
 </pre></div>
 </div>
+<p>Leave this running in your window until complete</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This compile can take up to 30 minutes so feel free to move onto some of the other project tasks in the mean time. Maybe start thinking about <a class="reference internal" href="exercises_wrf_sens.html"><span class="doc std std-doc">WRF sensitivity</span></a> experiments or starting with the <a class="reference internal" href="exercises_class.html"><span class="doc std std-doc">CLASS set-up</span></a> if you haven’t already.</p>
@@ -462,6 +473,10 @@ When complete do a build check by viewing the end of the compile log file <code 
 <p>If the code compiled correctly near the end you should see</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---&gt;</span>                  <span class="n">Executables</span> <span class="n">successfully</span> <span class="n">built</span>                  <span class="o">&lt;---</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to recompile the whole set of executables for WPS and WRF run the local <code class="docutils literal notranslate"><span class="pre">/clean</span></code> command</p>
 </div>
 <ol class="arabic simple" start="6">
 <li><p>Code and executable check

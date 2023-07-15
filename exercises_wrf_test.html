@@ -166,6 +166,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivtiy Experiments</a></li>
+
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -366,8 +367,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-model-domain-initialize">WPS: Model Domain Initialize</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrf-running-the-model">WRF: Running the model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-experiments">Sensitivity Experiments</a></li>
 </ul>
             </nav>
         </div>
@@ -393,8 +392,8 @@ Summary workflow <a class="reference external" href="https://www2.mmm.ucar.edu/w
 <p>Everytime <code class="docutils literal notranslate"><span class="pre">edit</span></code> is used in a command it implies you will use your chosen editing method. This could be via ‘jupyterhub or terminal-based editor such as <code class="docutils literal notranslate"><span class="pre">emacs</span></code></p>
 </div>
 <p>In WPS directory. Edit namelist.wps</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
-edit namelist.wps 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">WPS</span>
+<span class="n">edit</span> <span class="n">namelist</span><span class="o">.</span><span class="n">wps</span> 
 </pre></div>
 </div>
 <p>Change the following lines only to the values shown (mostly getting rid of 2nd number and a <code class="docutils literal notranslate"><span class="pre">,</span></code> at end of each line).
@@ -427,9 +426,13 @@ This locates the domain over the -79W,41E. Approximately the center of action fo
 <span class="o">/</span>
 </pre></div>
 </div>
-<p>Plot domain grid (requires a simple <a class="reference external" href="https://www.ncl.ucar.edu">ncl</a> command and a module load if not currently installed))</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">ncl</span>
-<span class="n">ncl</span> <span class="o">&lt;</span> <span class="n">util</span><span class="o">/</span><span class="n">plotgrids_new</span><span class="o">.</span><span class="n">ncl</span>
+<p>Plot domain grid (requires a simple <a class="reference external" href="https://www.ncl.ucar.edu">ncl</a> command and a module load if not currently installed))
+First you will need to edit the ncl file to get the right output tyoe <code class="docutils literal notranslate"><span class="pre">.png</span></code> to be easily viewd in <code class="docutils literal notranslate"><span class="pre">jupyterhub</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>edit util/plotgrids_new.ncl (and set `type = &quot;png&quot;`)
+</pre></div>
+</div>
+<p>Now run grid domain image code</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ncl</span> <span class="o">&lt;</span> <span class="n">util</span><span class="o">/</span><span class="n">plotgrids_new</span><span class="o">.</span><span class="n">ncl</span>
 </pre></div>
 </div>
 <p>View created image file <code class="docutils literal notranslate"><span class="pre">wps_show_dom.png</span></code> in jupyterhub</p>
@@ -460,7 +463,7 @@ Browse data (should for the most part be obviously North East USA)</p></li>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data needed to run this case study can be found here:
-`/glade/scratch/rneale/GFS/’</p>
+<code class="docutils literal notranslate"><span class="pre">/glade/scratch/rneale/GFS/</span></code></p>
 </div>
 <p>With the changes to <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> run WPS to set up processing of meteorology fields for initial and boundary forcing</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
@@ -471,7 +474,7 @@ Browse data (should for the most part be obviously North East USA)</p></li>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="n">ungrib</span><span class="o">/</span><span class="n">Variable_Tables</span><span class="o">/</span><span class="n">Vtable</span><span class="o">.</span><span class="n">GFS</span> <span class="n">Vtable</span>
 </pre></div>
 </div>
-<p>Then run the <code class="docutils literal notranslate"><span class="pre">ungrib</span></code> executable. Ungrib translates the raw GRIB files from GFS so tha <code class="docutils literal notranslate"><span class="pre">metgrid</span></code> can perform required interpolation to the model domain</p>
+<p>Then run the <code class="docutils literal notranslate"><span class="pre">ungrib</span></code> executable. Ungrib translates the raw GRIB files from GFS so tha <code class="docutils literal notranslate"><span class="pre">metgrid</span></code> can perform required interpolation to the model domain (takes a few minutes)</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell here may lead to problems. Try switching to <code class="docutils literal notranslate"><span class="pre">csh</span></code> if that’s the case.</p>
@@ -485,39 +488,67 @@ Look for:</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Ugrib</span></code> produces a number of local files e.g. <code class="docutils literal notranslate"><span class="pre">FILE:2020-12-15_00</span></code> which are prestaged for WRF to be run.</p>
-<p>Finally for data preparation for WRF is interpolation performed in `metgrid’</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are to rerun this step you must delete all the <code class="docutils literal notranslate"><span class="pre">FILE:*</span></code> files first</p>
+</div>
+<p>Finally for data preparation for WRF is interpolation performed in <code class="docutils literal notranslate"><span class="pre">metgrid</span></code> (takes about a minute).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">metgrid</span><span class="o">.</span><span class="n">exe</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">metgrid</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="wrf-running-the-model">
-<h2>WRF: Running the model<a class="headerlink" href="#wrf-running-the-model" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple" start="4">
+<li><p>Running the model</p></li>
+</ol>
 <p>Change to WRF directory from WPS directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">WRF</span>
 </pre></div>
 </div>
 <p>Let’s run the case here</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">test</span><span class="o">/</span><span class="n">em_real</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">run</span> <span class="p">(</span><span class="n">we</span> <span class="n">can</span> <span class="n">also</span> <span class="n">run</span> <span class="n">it</span> <span class="n">here</span><span class="p">:</span> <span class="n">test</span><span class="o">/</span><span class="n">em_real</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>And similar to linking the files we generated with WPS do the following</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="o">../../../</span><span class="n">WPS</span><span class="o">/</span><span class="n">met_em</span><span class="o">.</span><span class="n">d01</span><span class="mf">.2000</span><span class="o">-</span><span class="mi">01</span><span class="o">*</span> <span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">sf</span> <span class="o">../../</span><span class="n">WPS</span><span class="o">/</span><span class="n">met_em</span><span class="o">.</span><span class="n">d01</span><span class="mf">.2020</span><span class="o">-</span><span class="mi">12</span><span class="o">*</span> <span class="o">.</span>
 </pre></div>
 </div>
-<p>Look over namelist</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">emacs</span> <span class="n">namelist</span><span class="o">.</span><span class="n">input</span> 
+<p>Look over namelist, make sure it reflects the period of the</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edit</span> <span class="n">namelist</span><span class="o">.</span><span class="n">input</span> 
 </pre></div>
 </div>
-<p>We are only using the first column of values as we only have a single domain and no nesting
-Extend end date of forecast out to <strong>Jan 26 00Z</strong>.
-And change the gravity wave drag option to gwd_opt=0 instead</p>
-<p>In preparation for sensitivity runs check out descriptions of namelist variables</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">more</span> <span class="n">README</span><span class="o">.</span><span class="n">namelist</span>
+<p>We are only using the first column of values as we only have a single domain and no nesting.
+Make sure you change:
+*Trun off second domain <code class="docutils literal notranslate"><span class="pre">input_from_file=.true.,.false.</span></code>
+*Dates of forecast should be <code class="docutils literal notranslate"><span class="pre">'2020-12-15_00:00:00'</span> <span class="pre">to</span> <span class="pre">'2020-12-17_18:00:00'</span></code>
+*Domain range: <code class="docutils literal notranslate"><span class="pre">e_we=100</span></code> and <code class="docutils literal notranslate"><span class="pre">e_sn=80</span></code>
+*Gravity wave drag option to <code class="docutils literal notranslate"><span class="pre">gwd_opt=0</span></code> instead</p>
+<p>You can now run the <code class="docutils literal notranslate"><span class="pre">real</span></code> program, which processe data for a real case study, on a compute node</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">real</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
+<p>RUN WRF (on a compute node)!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">wrf</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
 </div>
-<div class="section" id="sensitivity-experiments">
-<h2>Sensitivity Experiments<a class="headerlink" href="#sensitivity-experiments" title="Permalink to this headline">#</a></h2>
+<p>You will find all the output from the run in this directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">test</span><span class="o">/</span><span class="n">em_real</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>You should see hourly <code class="docutils literal notranslate"><span class="pre">wrfout</span></code> files from <code class="docutils literal notranslate"><span class="pre">2020-12-15</span></code> through <code class="docutils literal notranslate"><span class="pre">2020-12-17</span></code> similar to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wrfout_d01_2020</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">15_00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Simple analysis of the output</p></li>
+</ol>
+<p>OK let’s take a look inside these with one of the notebooks.
+Make a new <code class="docutils literal notranslate"><span class="pre">diagnsotics</span></code> directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir /glade/work/$USER/ASP2023/diags
+</pre></div>
+</div>
+<p>Copy across the set of notebooks for simple analysis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cp /glade/work/rneale/ASP2023/diags/* /glade/work/$USER/ASP2023/diags
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -589,8 +620,6 @@ And change the gravity wave drag option to gwd_opt=0 instead</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wps-model-domain-initialize">WPS: Model Domain Initialize</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wrf-running-the-model">WRF: Running the model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sensitivity-experiments">Sensitivity Experiments</a></li>
 </ul>
   </nav></div>
 

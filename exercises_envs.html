@@ -165,7 +165,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensiivtiy Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivtiy Experiments</a></li>
+
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="exercises_class.html">Chemistry Land-surface Atmosphere Soil Slab model (CLASS)</a></li>
@@ -424,7 +425,7 @@ export PATH=&quot;/Users/$USER/miniconda3/bin:$PATH&quot;
 </div>
 <div class="section" id="terminal">
 <h3>Terminal<a class="headerlink" href="#terminal" title="Permalink to this headline">#</a></h3>
-<p>An alternative approach to <code class="docutils literal notranslate"><span class="pre">conda</span></code> for command line operations and communication to Cheyenne is to use a terminal setup directly and use ssh to connect to cheyenne (this will require DUO login)</p>
+<p>An alternative approach to <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">jupyter-hub</span></code> for command line operations and communication to Cheyenne is to use a terminal setup directly and use ssh to connect to cheyenne (this will require DUO login)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh –XY [$USER]@cheyenne.ucar.edu
 
 </pre></div>
@@ -434,6 +435,10 @@ export PATH=&quot;/Users/$USER/miniconda3/bin:$PATH&quot;
 sftp &#39;[$USER]@cheyenne.ucar.edu:/glade/work/$USER/ASP2023/files_to_copy*&#39; .
 
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/README.html"><code class="docutils literal notranslate"><span class="pre">CESM</span> <span class="pre">tutorial</span></code></a> in the the week prior to the Colloquium had many difficults related to the reliability of <code class="docutils literal notranslate"><span class="pre">[NCAR's</span> <span class="pre">jupyter-hub</span> <span class="pre">server](https://jupyterhub.hpc.ucar.edu/)</span></code>. So you should be aware of the above just in case we experiene problems</p>
 </div>
 <p>Useful software useful for projects would be a text/file editor e.g., <a class="reference external" href="https://www.gnu.org/software/emacs/"><code class="docutils literal notranslate"><span class="pre">emacs</span></code></a> the netcdf file operators <a class="reference external" href="https://nco.sourceforge.net/"><code class="docutils literal notranslate"><span class="pre">nco</span></code></a>, a simple netcdf viewer either <a class="reference external" href="https://cirrus.ucsd.edu/ncview/"><code class="docutils literal notranslate"><span class="pre">ncview</span></code></a> or <a class="reference external" href="https://www.giss.nasa.gov/tools/panoply/"><code class="docutils literal notranslate"><span class="pre">panoply</span></code></a> and <a class="reference external" href="https://www.ncl.ucar.edu/"><code class="docutils literal notranslate"><span class="pre">ncl</span></code></a> an establshed analysis software for some simple plots. The CESM Tutorial webpage offers a comprehensive outline of software options <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/resources/resources_overview.html">here</a>.</p>
 </div>
@@ -483,8 +488,19 @@ Unix commands for your home directory<br />
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/resources/resources_overview.html">CESM tutorial webpage</a> provides a <code class="docutils literal notranslate"><span class="pre">comprehensive</span> <span class="pre">setup</span></code> for your environment (<code class="docutils literal notranslate"><span class="pre">.profile</span></code>,<code class="docutils literal notranslate"><span class="pre">.tshrc</span></code>) and a summary description of <code class="docutils literal notranslate"><span class="pre">software</span></code> that can be utilised during the colloquium.</p>
+<p>The <a class="reference external" href="https://ncar.github.io/CESM-Tutorial/notebooks/resources/profile.html#setting-up-your-ncar-hpc-environment">CESM tutorial webpage</a> provides a <code class="docutils literal notranslate"><span class="pre">comprehensive</span> <span class="pre">setup</span></code> for your environment (<code class="docutils literal notranslate"><span class="pre">.profile</span></code>,<code class="docutils literal notranslate"><span class="pre">.tshrc</span></code>) and a summary description of <code class="docutils literal notranslate"><span class="pre">software</span></code> that can be utilised during the colloquium.</p>
 </div>
+<p>Depending on your shell results of typing <code class="docutils literal notranslate"><span class="pre">echo</span> <span class="pre">$SHELL</span></code> copy one of the following environemnt setup files</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">ASP2023</span><span class="o">/</span><span class="n">setup</span><span class="o">/</span><span class="n">profile</span> <span class="o">~/.</span><span class="n">profile</span> <span class="p">(</span><span class="k">for</span> <span class="n">bash</span> <span class="n">shell</span><span class="p">)</span>
+<span class="n">cp</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">ASP2023</span><span class="o">/</span><span class="n">setup</span><span class="o">/</span><span class="n">tcshrc</span> <span class="o">~/.</span><span class="n">tcshrc</span> <span class="p">(</span><span class="k">for</span> <span class="n">tcsh</span> <span class="n">shell</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To activate for this session</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">profile</span>
+<span class="n">source</span> <span class="o">~/.</span><span class="n">tcshrc</span>
+</pre></div>
+</div>
+<p>All <code class="docutils literal notranslate"><span class="pre">new</span></code> sessions activate you environemnt automatically</p>
 </div>
 </div>
 </div>

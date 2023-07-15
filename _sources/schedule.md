@@ -152,7 +152,7 @@ Free time:
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Elie Bou-Zeid** <br/> Princeton      |  <span style="color:blue">**Beyond the textbook: Unsteady and Baroclinic Flow and Turbulence in the ABL**</span>		|
-| 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	<span style="color:blue">**Boundary Layers and Wind Resources**</span> |
+| 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	<span style="color:blue">**Renewable Energy in the Boundary Layer**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Rose Sentana** <br/>Professional Development		   | <span style="color:blue">**Social Media and Careers**</span>		||
 | 12:00-1:30 | *Lunch* 			 |  				||			
@@ -167,11 +167,11 @@ Free time:
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Boundary Layers and Applications**</span>			|
-| 9:30-10:30 | **Project Time**        |  |
+| 9:30-10:30 | **Project Time **        |  |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:00| **Project time and presnetation preparation**		   | 	||
+| 11:00-12:00| **Project Time and Presenetation Preparation**		   | 	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
-| 1:30-3:00  | 	**Student Presentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
+| 1:30-3:00  | 	**Student Pressentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Student Presentations (continued)**   |		 <span style="color:blue">**5 mins each per group**</span>			||	
 | 5:15       | 		Shuttle to CU	   |				||	
