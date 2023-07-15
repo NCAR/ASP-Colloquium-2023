@@ -466,8 +466,7 @@ Browse data (should for the most part be obviously North East USA)</p></li>
 <code class="docutils literal notranslate"><span class="pre">/glade/scratch/rneale/GFS/</span></code></p>
 </div>
 <p>With the changes to <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> run WPS to set up processing of meteorology fields for initial and boundary forcing</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
-./link_grib.csh /glade/scratch/rneale/GFS/asp1/
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">link_grib</span><span class="o">.</span><span class="n">csh</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">GFS</span><span class="o">/</span><span class="n">asp1</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Then link to the correct Vtable (GFS, for this case):</p>
@@ -487,7 +486,7 @@ Look for:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!  Successful completion of ungrib.   !
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">Ugrib</span></code> produces a number of local files e.g. <code class="docutils literal notranslate"><span class="pre">FILE:2020-12-15_00</span></code> which are prestaged for WRF to be run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">ungrib</span></code> produces a number of local files e.g. <code class="docutils literal notranslate"><span class="pre">FILE:2020-12-15_00</span></code> which are prestaged for WRF to be run.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If you are to rerun this step you must delete all the <code class="docutils literal notranslate"><span class="pre">FILE:*</span></code> files first</p>

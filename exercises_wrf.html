@@ -480,17 +480,17 @@ When complete do a build check by viewing the end of the compile log file <code 
 </div>
 <ol class="arabic simple" start="6">
 <li><p>Code and executable check
-Once the compilation completes, to check whether it was successful, you need to look for executables in the <code class="docutils literal notranslate"><span class="pre">WRF/main</span></code> directory:</p></li>
+Once the compilation completes, to check whether it was successful, you need to look for executable in the <code class="docutils literal notranslate"><span class="pre">WRF/main</span></code> directory:</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">main</span><span class="o">/*.</span><span class="n">exe</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="7">
-<li><p>WPS code configure - more detailed description <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a>)
+<li><p>WPS code configure - find a more detailed description <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap3.html">here</a>
 Go to the WPS code based and select the right code <em>branch</em></p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/WPS
-git checkout release-v4.5
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">../</span><span class="n">WPS</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">release</span><span class="o">-</span><span class="n">v4</span><span class="mf">.5</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="8">
@@ -512,7 +512,7 @@ You should see a <code class="docutils literal notranslate"><span class="pre">co
 </pre></div>
 </div>
 <p>This should take much less take than WRF (a few minutes)</p>
-<p>If your compilation was successful, you should see these executables created (make sure they are not of size zero)</p>
+<p>If your compilation was successful, you should see these executables created in (make sure they are not of size zero)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">geogrid</span><span class="o">.</span><span class="n">exe</span><span class="p">,</span> <span class="n">ungrib</span><span class="o">.</span><span class="n">exe</span><span class="p">,</span> <span class="n">metgrid</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
