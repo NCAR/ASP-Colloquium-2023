@@ -19,7 +19,7 @@ Students Arrive in Boulder
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:00-8:40  | Welcome from NCAR Leadership           |               || 
 | 8:40-9:30  | **Richard Neale** <br/> National Center for Atmospheric Research     | <span style="color:blue">**Colloquium Introduction and Housekeeping**</span> <br/> 		|
-| 9:30-10:30 | **Ned Patton**  <br/> National Center for Atmospheric Research          | 	<span style="color:blue">**Integrated View of the Boundary Layer**</span> |
+| 9:30-10:30 | **Ned Patton**  <br/> National Center for Atmospheric Research          | 	<span style="color:blue">**The Atmospheric Boundary Layer: Integrating Complexity Across Disciplines**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Student lightning research talks**		   |		<span style="color:blue">**3 minute talks - 2 slides**</span>		||
 | 12:30-1:30 | *Lunch* 			 |  				||			
