@@ -520,12 +520,15 @@ Look for:</p>
 </pre></div>
 </div>
 <p>We are only using the first column of values as we only have a single domain and no nesting.
-Make sure you change:
-*Trun off second domain <code class="docutils literal notranslate"><span class="pre">input_from_file=.true.,.false.</span></code>
-*Dates of forecast should be <code class="docutils literal notranslate"><span class="pre">'2020-12-15_00:00:00'</span> <span class="pre">to</span> <span class="pre">'2020-12-17_18:00:00'</span></code>
-*Domain range: <code class="docutils literal notranslate"><span class="pre">e_we=100</span></code> and <code class="docutils literal notranslate"><span class="pre">e_sn=80</span></code>
-*Gravity wave drag option to <code class="docutils literal notranslate"><span class="pre">gwd_opt=0</span></code> instead</p>
-<p>You can now run the <code class="docutils literal notranslate"><span class="pre">real</span></code> program, which processe data for a real case study, on a compute node</p>
+Make sure you change:</p>
+<ul class="simple">
+<li><p>Turn off second domain <code class="docutils literal notranslate"><span class="pre">input_from_file=.true.,.false.</span></code></p></li>
+<li><p>Dates of forecast should be <code class="docutils literal notranslate"><span class="pre">'2020-12-15_00:00:00'</span> <span class="pre">to</span> <span class="pre">'2020-12-17_18:00:00'</span></code></p></li>
+<li><p>Length of forecast should be <code class="docutils literal notranslate"><span class="pre">run_hours</span> <span class="pre">=</span> <span class="pre">48</span></code></p></li>
+<li><p>Domain range: <code class="docutils literal notranslate"><span class="pre">e_we=100</span></code> and <code class="docutils literal notranslate"><span class="pre">e_sn=80</span></code></p></li>
+<li><p>Gravity wave drag option to <code class="docutils literal notranslate"><span class="pre">gwd_opt=0</span></code> instead</p></li>
+</ul>
+<p>You can now run the <code class="docutils literal notranslate"><span class="pre">real</span></code> program, which processes data for a real case study, on a compute node</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">real</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
