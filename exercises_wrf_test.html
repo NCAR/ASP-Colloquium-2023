@@ -524,7 +524,7 @@ Make sure you change:</p>
 <ul class="simple">
 <li><p>Turn off second domain <code class="docutils literal notranslate"><span class="pre">input_from_file=.true.,.false.</span></code></p></li>
 <li><p>Dates of forecast should be <code class="docutils literal notranslate"><span class="pre">'2020-12-15_00:00:00'</span> <span class="pre">to</span> <span class="pre">'2020-12-17_18:00:00'</span></code></p></li>
-<li><p>Length of forecast should be <code class="docutils literal notranslate"><span class="pre">run_hours</span> <span class="pre">=</span> <span class="pre">48</span></code></p></li>
+<li><p>Length of forecast should be <code class="docutils literal notranslate"><span class="pre">run_hours</span> <span class="pre">=</span> <span class="pre">60</span></code></p></li>
 <li><p>Domain range: <code class="docutils literal notranslate"><span class="pre">e_we=100</span></code> and <code class="docutils literal notranslate"><span class="pre">e_sn=80</span></code></p></li>
 <li><p>Gravity wave drag option to <code class="docutils literal notranslate"><span class="pre">gwd_opt=0</span></code> instead</p></li>
 </ul>
@@ -532,8 +532,8 @@ Make sure you change:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">real</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
-<p>RUN WRF (on a compute node)!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">wrf</span><span class="o">.</span><span class="n">exe</span>
+<p>RUN WRF (on a compute node, with a little more time to complete - 2 hours) !</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">-</span><span class="n">l</span> <span class="n">walltime</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span> <span class="o">--</span> <span class="o">./</span><span class="n">wrf</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 <p>You will find all the output from the run in this directory</p>

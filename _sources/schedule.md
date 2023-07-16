@@ -68,7 +68,7 @@ Students Arrive in Boulder
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Michael Tjernstrom** <br/> Stockholm University       | <span style="color:blue">**Arctic Boundary Layers**</span>			|
-| 9:30-10:30 | **Brian Medeiros**  <br/>  National Center for Atmospheric Research        | 	<span style="color:blue">**Boundary Layer Clouds**</span> |
+| 9:30-10:30 | **Brian Medeiros**  <br/>  National Center for Atmospheric Research        | 	<span style="color:blue">**Stratocumulus-to-Cumulus Transition in the Subtropics**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Gunilla Svensson** <br/> Stockholm University     | <span style="color:blue">**Boundary Layer and Large-Scale Circulation**</span>		|
 | 12:00-1:30 | *Lunch* 			 |  				||			
