@@ -2,7 +2,7 @@
 
 **Qinqin Kong**, Purdue                 [email](mailto:kong97@purdue.edu)	\
 **Linnea Huusko**, Stockholm University [email](mailto:linnea.huusko@misu.su.se)		 \
-**David Crowe Pinilla**, University of Virgina [email](mailto:dac8ba@virginia.edu)	 \
+**David Crowe Pinilla**, University of Virginia [email](mailto:dac8ba@virginia.edu)	 \
 **Chuck Baker**, University of Maryland [email](mailto:torcha98@umd.edu)	\
 **Yue Qin**, Boston University [email](mailto:yueqin@bu.edu)	 \
 **Adwoa Aboagye-Okyere**, Cornell [email](mailto:Aboagye-Okyere)	 \
@@ -25,4 +25,4 @@
 **Elise Legarth**, University of British Columbia, Canada [email](mailto:elegarth@eoas.ubc.ca)	 \
 **Marian de Orla-Barile**, UC Santa Barbara [email](mailto:mariandeorla-barile@ucsb.edu) \
 **Matthew Koszuta**, Oregon State University [email](mailto:koszutam@oregonstate.edu) \
-**Mehtab KHan**, Technical University of Delft, Netherlands [email](mailto:m.a.khan-2@tudelft.nl)
+**Mehtab Khan**, Technical University of Delft, Netherlands [email](mailto:m.a.khan-2@tudelft.nl)
