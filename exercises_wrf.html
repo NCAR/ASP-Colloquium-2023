@@ -455,8 +455,12 @@ This then generates the <code class="docutils literal notranslate"><span class="
 </div>
 <p>Need to do a small code grab first and then compile</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">phys</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">submodules</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">..</span>
-<span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="nb">compile</span> <span class="o">-</span><span class="n">j</span> <span class="mi">8</span> <span class="n">em_real</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
+<span class="n">qcmd</span> <span class="o">-</span><span class="n">q</span> <span class="n">S2036390</span> <span class="o">--</span> <span class="o">./</span><span class="nb">compile</span> <span class="o">-</span><span class="n">j</span> <span class="mi">8</span> <span class="n">em_real</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">compile</span>
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Remove the <code class="docutils literal notranslate"><span class="pre">-q</span> <span class="pre">S2036390</span></code> is submitting outside the hours of 1:30pm to midnight. Which is the period of our special reservation</p>
 </div>
 <p>Leave this running in your window until complete</p>
 <div class="admonition warning">
@@ -508,7 +512,7 @@ You should see a <code class="docutils literal notranslate"><span class="pre">co
 <ol class="arabic simple" start="9">
 <li><p>Compile WPS</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="nb">compile</span> <span class="o">&gt;&amp;</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="nb">compile</span> <span class="o">&gt;&amp;</span> <span class="nb">compile</span><span class="o">.</span><span class="n">log</span>
 </pre></div>
 </div>
 <p>This should take much less take than WRF (a few minutes)</p>
