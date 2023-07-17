@@ -34,12 +34,12 @@ Students Arrive in Boulder
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||lightning
-| 8:30-9:30  | **Sukanta Basu** <br/> University at Albany     | <span style="color:blue">**Similarity theory**			|
+| 8:30-9:30  | **Sukanta Basu** <br/> University of Albany     | <span style="color:blue">**Similarity theory**			|
 | 9:30-10:30 | **Jakob Mann**  <br/> Technical University of Denmark         | 	<span style="color:blue">**Atmospheric Problems Relevant for Wind Energy**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Paquita Zuidema** <br/> University of Miami		   |  <span style="color:blue">**Mixed-phase Microphysics in the Boundary Layer**</span>			||
 | 12:00-1:30 | *Lunch (chat with speakers)* 			 |  				||			
-| 1:30-3:00  | 	**Valeria Sloan** <br/> Professional Development (NCAR)		   | <span style="color:blue">**How to give a bad talk (and prepare a good one)**</span>				||
+| 1:30-3:00  | 	**Valerie Sloan** <br/> Professional Development (NCAR)		   | <span style="color:blue">**How to give a bad talk (and prepare a good one)**</span>				||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Project Time: CESM**   |				||	
 | 5:15       | 		Shuttle to CU	   |				||	

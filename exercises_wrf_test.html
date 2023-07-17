@@ -554,6 +554,11 @@ Make sure you change:</p>
 </pre></div>
 </div>
 <p>Then if you <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-XY</span> <span class="pre">$USER&#64;cheyenne.ucar.edu</span></code> it is easy to use <code class="docutils literal notranslate"><span class="pre">panoply</span></code> or <code class="docutils literal notranslate"><span class="pre">ncview</span></code> to ‘quick-look’ the data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">panoply</span>  <span class="n">wrfout_d01_2020</span><span class="o">.</span><span class="n">nc</span>
+<span class="n">ncview</span>  <span class="n">wrfout_d01_2020</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p>This can also be done locally on your laptop by using <code class="docutils literal notranslate"><span class="pre">sftp</span></code> to bring your data from <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code></p>
 <p>OK let’s take a look inside these with one of the <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> notebooks.</p>
 <p>Make a new <code class="docutils literal notranslate"><span class="pre">diagnostics</span></code> directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mkdir /glade/work/$USER/ASP2023/diags
