@@ -387,6 +387,10 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>edit /glade/work/$USER/ERF/test/em_real/namelist.input
 </pre></div>
 </div>
+<p>And just the parameterization selections in the <code class="docutils literal notranslate"><span class="pre">&amp;physics</span></code> block then re-run the simulation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">./</span><span class="n">wrf</span><span class="o">.</span><span class="n">exe</span>
+</pre></div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>There are many other configurations that are possible, not all of them will perform well for your case studiy. Choose a particular change (1 process at a time) based on the different formulation of the scheme you find most interesting and re-run your case studies as above.</p>
