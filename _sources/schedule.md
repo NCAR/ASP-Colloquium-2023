@@ -21,7 +21,7 @@ Students Arrive in Boulder
 | 8:40-9:30  | **Richard Neale** <br/> National Center for Atmospheric Research     | <span style="color:blue">**Colloquium Introduction and Housekeeping**</span> <br/> 		|
 | 9:30-10:30 | **Ned Patton**  <br/> National Center for Atmospheric Research          | 	<span style="color:blue">**The Atmospheric Boundary Layer: Integrating Complexity Across Disciplines**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:30| **Student lightning research talks**		   |		<span style="color:blue">**3 minute talks - 2 slides**<br/>Drop slides [**here**](https://drive.google.com/drive/folders/1ZJigy5Wis2nQcCM7xwXfneWOJdjOeDO7?usp=sharing)</span> <br/> Schedule [**here**](https://docs.google.com/document/d/1_PZnqkOT9fAORO43rCUzsw7bIoF3KfeAWJ2uQu0hG3Y/edit)		||
+| 11:00-12:30| **Student lightning research talks**		   |		<span style="color:blue">**3 minute talks - 2 slides**</span><br/>Drop slides [**here**](https://drive.google.com/drive/folders/1ZJigy5Wis2nQcCM7xwXfneWOJdjOeDO7?usp=sharing) <br/> Schedule [**here**](https://docs.google.com/document/d/1_PZnqkOT9fAORO43rCUzsw7bIoF3KfeAWJ2uQu0hG3Y/edit)		||
 | 12:30-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	**CISL Computing Environment Configuration**		   |				||
 |            |  **Project Time Choices: WRF, CESM, CLASS and observations** 
