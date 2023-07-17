@@ -451,7 +451,8 @@ This then generates the <code class="docutils literal notranslate"><span class="
 <p>Compile WRF where the build type is <code class="docutils literal notranslate"><span class="pre">em_real</span></code> to denote a real case study (as opposed to seomthing like <code class="docutils literal notranslate"><span class="pre">idealised</span></code>)</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Below commands starting with <code class="docutils literal notranslate"><span class="pre">qcmd</span></code> push the work to a separate <code class="docutils literal notranslate"><span class="pre">compute</span> <span class="pre">node</span></code> to avoid congestion on the <code class="docutils literal notranslate"><span class="pre">login</span> <span class="pre">nodes</span></code></p>
+<p>Below commands starting with <code class="docutils literal notranslate"><span class="pre">qcmd</span></code> push the work to a separate <code class="docutils literal notranslate"><span class="pre">compute</span> <span class="pre">node</span></code> to avoid congestion on the <code class="docutils literal notranslate"><span class="pre">login</span> <span class="pre">nodes</span></code>.
+These are interactive sesssions so you wll have to stay logged on to <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code> for the executable to complete</p>
 </div>
 <p>Need to do a small code grab first and then compile</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">phys</span> <span class="o">&amp;&amp;</span> <span class="n">make</span> <span class="n">submodules</span> <span class="o">&amp;&amp;</span> <span class="n">cd</span> <span class="o">..</span>
