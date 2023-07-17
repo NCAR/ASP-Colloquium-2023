@@ -480,7 +480,7 @@ Browse data (should for the most part be obviously North East USA)</p></li>
 <p class="admonition-title">Warning</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell here may lead to problems. Try switching to <code class="docutils literal notranslate"><span class="pre">csh</span></code> if that’s the case.</p>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">ungrib</span><span class="o">.</span><span class="n">exe</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">ungrib</span><span class="o">.</span><span class="n">exe</span>
 </pre></div>
 </div>
 <p>The extensive output from running this command details the available data variables and levels used for interpolation.
@@ -494,7 +494,7 @@ Look for:</p>
 <p>If you are to rerun this step you must delete all the <code class="docutils literal notranslate"><span class="pre">FILE:*</span></code> files first</p>
 </div>
 <p>Finally for data preparation for WRF is interpolation performed in <code class="docutils literal notranslate"><span class="pre">metgrid</span></code> (takes about a minute).</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">metgrid</span><span class="o">.</span><span class="n">exe</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">metgrid</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">qcmd</span> <span class="o">--</span> <span class="o">./</span><span class="n">metgrid</span><span class="o">.</span><span class="n">exe</span> <span class="o">&gt;&amp;</span> <span class="n">log</span><span class="o">.</span><span class="n">metgrid</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
