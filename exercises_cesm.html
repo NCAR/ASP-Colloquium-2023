@@ -485,16 +485,14 @@ With the default setup you have built it is configured for a default run period 
 <span class="o">./</span><span class="n">xmlquery</span> <span class="n">STOP_OPTION</span>
 </pre></div>
 </div>
+<p>Hopefully it is straight forward from this information to determine that the model will run for 5 <code class="docutils literal notranslate"><span class="pre">=STOP_N</span></code> days <code class="docutils literal notranslate"><span class="pre">=STOP_OPTION</span></code>.
+This is the default setup so we don’t have to chnage anything else. Note
+that we will be running for multiple years in your sensitivity experiments.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To ensure we use the right project key and we utilise our reseved compute nodes include the following
-‘./xmlchange –force JOB_QUEUE=R1787445<code class="docutils literal notranslate"> <span class="pre">./xmlchange</span> <span class="pre">PROJECT=UESM0012</span></code></p>
-</div>
-<p>Hopefully it is straight forward from this information to determine that the model will run for 5 <code class="docutils literal notranslate"><span class="pre">=STOP_N</span></code> days <code class="docutils literal notranslate"><span class="pre">=STOP_OPTION</span></code>.
-This is the default setup so we don’t have to chnage anything else.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will be running for multiple years in your sensitivity experiments.</p>
+<code class="docutils literal notranslate"><span class="pre">./xmlchange</span> <span class="pre">--force</span> <span class="pre">JOB_QUEUE=S2036390</span></code>
+<code class="docutils literal notranslate"><span class="pre">./xmlchange</span> <span class="pre">PROJECT=NASP0013</span></code></p>
 </div>
 <ol class="arabic simple" start="8">
 <li><p>Submit a test run
@@ -578,6 +576,24 @@ See <code class="docutils literal notranslate"><span class="pre">Cecile's</span>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">ASP2023</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">sst_HadOIBl_bc_1</span><span class="mf">.9</span><span class="n">x2</span><span class="mf">.5</span><span class="n">_clim_SST</span><span class="o">+</span><span class="mi">4</span><span class="n">K</span><span class="o">.</span><span class="n">c230718</span><span class="o">.</span><span class="n">nc</span>
 </pre></div>
 </div>
+<ol class="arabic simple" start="12">
+<li><p>Create climatologies</p></li>
+</ol>
+<p>If you run for more than one year with CESM it is useful to produce <code class="docutils literal notranslate"><span class="pre">climatologies</span></code></p>
+<p>Let’s move to the archive directory where all your monthly mean history <code class="docutils literal notranslate"><span class="pre">h0</span></code> output is for a particular case (e.g., <code class="docutils literal notranslate"><span class="pre">$CASE</span></code> - cesm_control for our control here)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/scratch/$USER/archive/$CASE
+</pre></div>
+</div>
+<p>Create a directory for <code class="docutils literal notranslate"><span class="pre">climatology</span></code> data</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">climo</span>
+<span class="n">cd</span> <span class="n">climo</span>
+</pre></div>
+</div>
+<p>For each month create a single averaged file using <code class="docutils literal notranslate"><span class="pre">ncea</span></code> commands (make sure you have input the command <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">nco</span></code>. Below <code class="docutils literal notranslate"><span class="pre">XX</span></code> is run for each separate month of the year; 01 through 12</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ncea ../atm/hist/$CASE.h0.????-XX.nc $CASE_XX_climo.nc
+</pre></div>
+</div>
+<p>Thes are then the climatologies you can use for analysis</p>
 </div>
 </div>
 
