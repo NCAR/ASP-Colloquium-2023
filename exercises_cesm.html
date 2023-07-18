@@ -165,7 +165,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Community Earth System Model</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="exercises_wrf_test.html">WRF Test Case Study: Major Snowstorm December 16-17, 2020</a></li>
-<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivtiy Experiments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="exercises_wrf_sens.html">WRF PBL Focused Sensitivity Experiments</a></li>
 
 </ul>
 </li>
@@ -173,6 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="exercises_obs.html">Observation Exercises</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="diagnostics.html">Diagnostics</a></li>
 </ul>
 
     </div>
@@ -564,6 +565,11 @@ ncview $CASE.cam.h0.0001.01.nc
 </pre></div>
 </div>
 <p>Repeat submission as above.</p>
+<ol class="arabic simple" start="11">
+<li><p>Extended case: Climate change simulation</p></li>
+</ol>
+<p>We will run a second simulation that modifies the Sea Surface Temperature (SST) to be <code class="docutils literal notranslate"><span class="pre">SST.new=SST.f2000+4K</span></code> this is a basleine climate sensitivty experiment used in <code class="docutils literal notranslate"><span class="pre">CMIP</span></code> protocals.
+See <code class="docutils literal notranslate"><span class="pre">Cecile's</span></code> presentation for details.</p>
 </div>
 </div>
 

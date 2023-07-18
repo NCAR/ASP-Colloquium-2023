@@ -86,8 +86,9 @@ Students Arrive in Boulder
 | 9:30-10:30 | **John Finnigan**  <br/> CSIRO, Australia    | 	<span style="color:blue">**Turbulence and Canopies** |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Ivana Stiperski** <br/> University of Innsbruck	   |  	<span style="color:blue">**Turbulence Over Orography**</span>		||
-| 12:00-1:30 | *Lunch* 			 |  				||			
-| 1:30-5:00  | 	**Field Trip**  |			**[National Renewable Energy Laboratory](https://www.nrel.gov/about/golden.html), Golden CO**	||	
+| 12:00-1:30 | *Lunch* 			 |  				||		
+! 1:30-2:30  |   **Tour of the Mesa Lab**              ||
+| 2:30-5:00  | 	**Field Trip**<br/>Marshall Mesa Observational Facility	||	
 | 5:15       | 		Shuttle to CU	   |				||	
 
 
