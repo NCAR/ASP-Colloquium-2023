@@ -590,10 +590,11 @@ See <code class="docutils literal notranslate"><span class="pre">Cecile's</span>
 </pre></div>
 </div>
 <p>For each month create a single averaged file using <code class="docutils literal notranslate"><span class="pre">ncea</span></code> commands (make sure you have input the command <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">nco</span></code>. Below <code class="docutils literal notranslate"><span class="pre">XX</span></code> is run for each separate month of the year; 01 through 12</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ncea ../atm/hist/$CASE.h0.????-XX.nc $CASE_XX_climo.nc
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ncea ../atm/hist/$CASE.cam.h0.????-XX.nc $CESM_XX_climo.nc
 </pre></div>
 </div>
-<p>Thes are then the climatologies you can use for analysis</p>
+<p>These are then the climatologies you can use in your analysis.
+Feel free to use either these suggested <a class="reference internal" href="diagnostics.html"><span class="doc std std-doc">python-based</span></a> or remind yourself of the other <a class="reference internal" href="exercises_envs.html"><span class="doc std std-doc">diagnostic tools</span></a> to interogate the data.</p>
 </div>
 </div>
 
