@@ -367,7 +367,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks-coming-soon">Notebooks (coming soon)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks-open-in-jupyterhub-and-copy-your-obs-directory">Notebooks (open in jupyterhub and copy your <code class="docutils literal notranslate"><span class="pre">obs</span></code> directory</a></li>
 </ul>
             </nav>
         </div>
@@ -381,18 +381,32 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="observation-exercises">
 <h1>Observation Exercises<a class="headerlink" href="#observation-exercises" title="Permalink to this headline">#</a></h1>
-<p>Choose from four diffent aspects of the observed boundary layer
-Move into your ASP2023 work directory</p>
+<p>Choose from different analyses of the observed boundary layer
+This is easiest done in your <code class="docutils literal notranslate"><span class="pre">jupyterhub</span></code> on cheyenne
+Move into your ASP2023 work directory an make a <code class="docutils literal notranslate"><span class="pre">obs</span></code> directory</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/
+mkdir obs
+</pre></div>
+</div>
+<p>Change to the observation root directory</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">ASP2023</span><span class="o">/</span><span class="n">obs</span><span class="o">/</span>
 </pre></div>
 </div>
-<div class="section" id="notebooks-coming-soon">
-<h2>Notebooks (coming soon)<a class="headerlink" href="#notebooks-coming-soon" title="Permalink to this headline">#</a></h2>
+<div class="section" id="notebooks-open-in-jupyterhub-and-copy-your-obs-directory">
+<h2>Notebooks (open in jupyterhub and copy your <code class="docutils literal notranslate"><span class="pre">obs</span></code> directory<a class="headerlink" href="#notebooks-open-in-jupyterhub-and-copy-your-obs-directory" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Soundings (<span class="xref myst">notebooks</span>)</p></li>
-<li><p>Scaling parameters (<span class="xref myst">notebook</span>)</p></li>
-<li><p>Turbulence (<span class="xref myst">notebook</span>)</p></li>
-<li><p>Convective boundary layers (notebook<span class="xref myst"></span>)</p></li>
+<li><p>Basic Soundings <br/></p></li>
+</ul>
+<p><code class="docutils literal notranslate"> <span class="pre">/glade/work/rneale/ASP2023/obs/02_plot_soundings/plot_soundings.ipynb</span></code></p>
+<ul class="simple">
+<li><p>Boundary Layer scaling <br/>
+<code class="docutils literal notranslate"><span class="pre">/glade/work/rneale/ASP2023/obs/04_bl_scaling/mean_tendencies2.ipynb</span></code></p></li>
+<li><p>Scaling parameters <br/>
+<code class="docutils literal notranslate"><span class="pre">/glade/work/rneale/ASP2023/obs/05_scaling_param/scalingparameters.ipynb</span></code></p></li>
+<li><p>Turbulence <br/>
+<code class="docutils literal notranslate"><span class="pre">/glade/work/rneale/ASP2023/obs/06_turbulence/TKE_stability.ipynb</span></code></p></li>
+<li><p>Convective Boundary Layers <br/>
+<code class="docutils literal notranslate"><span class="pre">/glade/work/rneale/ASP2023/obs/12_CBL/CBL.ipynb</span></code></p></li>
 </ul>
 <!---
 -2009 Steve
@@ -410,7 +424,10 @@ Move into your ASP2023 work directory</p>
 --
 
 --M2HATS field campaign: Hooter <p>Open notebooks and make a copy in your own obs directory</p>
-<p>Build your own asp2023 conda environment as detailed <a class="reference internal" href="diagnostics.html"><span class="doc std std-doc">here</span></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you build (or rebuild) your own asp2023 conda environment as detailed <a class="reference internal" href="diagnostics.html"><span class="doc std std-doc">here</span></a> all the notebooks chould work.</p>
+</div>
 <p>Then you should be goo to go to investigate these boundary layer tutorials!</p>
 </div>
 </div>
@@ -424,16 +441,16 @@ Move into your ASP2023 work directory</p>
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: ""
+            mode: "jbooks"
         },
         kernelOptions: {
-            name: "",
+            name: "jbooks",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = ''</script>
+    <script>kernelName = 'jbooks'</script>
 
                 </article>
               
@@ -482,7 +499,7 @@ Move into your ASP2023 work directory</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks-coming-soon">Notebooks (coming soon)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notebooks-open-in-jupyterhub-and-copy-your-obs-directory">Notebooks (open in jupyterhub and copy your <code class="docutils literal notranslate"><span class="pre">obs</span></code> directory</a></li>
 </ul>
   </nav></div>
 
