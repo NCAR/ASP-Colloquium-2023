@@ -50,7 +50,7 @@ Students Arrive in Boulder
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Jordi Vila**  <br/>  Wageningen University, Netherlands       | 	<span style="color:blue">**Introduction to the Chemistry Land-surface Atmosphere Soil Slab model (CLASS)**</span> |
-| 9:30-10:30 | **Julie Lunquist**  <br/> University of Colorado/NREL        | 	<span style="color:blue">**Observations Wind and Terrain**</span> |
+| 9:30-10:30 | **Julie Lunquist**  <br/> University of Colorado/NREL        | 	<span style="color:blue">**From turbulence to turbine wakes: boundary-layer challenges in the atmospheric science of wind energy**</span> |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Steve Oncley** <br/> National Center for Atmospheric Research 		   | <span style="color:blue">**Observations and Instrumentation**</span>				||
 | 12:00-1:30 | *Lunch* 			 |  				||			
@@ -167,7 +167,8 @@ Free time:
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
-| 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Boundary Layers and Applications**</span>			|
+| 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Drag in the Atmosphere: PBLs, Obstacles and Gravity Waves
+**</span>			|
 | 9:30-10:30 | **Project Time **        |  |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Project Time and Presenetation Preparation**		   | 	||
