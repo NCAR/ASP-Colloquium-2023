@@ -72,7 +72,7 @@ Students Arrive in Boulder
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Gunilla Svensson** <br/> Stockholm University     | <span style="color:blue">**Boundary Layer and Large-Scale Circulation**</span>		|
 | 12:00-1:30 | *Lunch* 			 |  				||			
-| 1:30-3:00  | 	**Professional Development** 		   |  <span style="color:blue">**Early Career Round Table**</span>				||
+| 1:30-3:00  | 	**Professional Development** 		   |  <span style="color:blue">**Early Career Round Table**</span><br/>[Alexandra Ramos Valle](mailto:aramos@ucar.edu), [Alice DuVivier](mailto:duvivier@ucar.edu) and [Jesse Nusbaumer](mailto:nusbaume@ucar.edu)				||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Project Time**   |				||	
 | 5:15       | 		Shuttle to CU	   |				||	
