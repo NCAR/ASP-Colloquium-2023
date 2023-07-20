@@ -565,10 +565,20 @@ ncview $CASE.cam.h0.0001.01.nc
 <ol class="arabic simple" start="10">
 <li><p>Submit a Climate Run</p></li>
 </ol>
-<p>You are now ready to run a longer simulation for 3 years.</p>
+<p>You are now ready to run a longer simulation for 3 years (in 1-year batches) and to write our restarts</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd /glade/work/$USER/ASP2023/cesm_cases/$CASE
+
 ./xmlchange STOP_OPTION=nmonths
-./xmlchange STOP_N=36
+./xmlchange STOP_N=12
+./xmlchange CONTINUE_RUN=FALSE
+./xmlchange RESUBMIT=2
+./xmlchange REST_OPTION=nyears
+./xmlchange REST_N=1
+./xmlchange DOUT_S_SAVE_INTERIM_RESTART_FILES=TRUE
+
+
+
+
 </pre></div>
 </div>
 <p>Repeat submission as above.</p>
