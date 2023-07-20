@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Attendees &#8212; My sample book</title>
+    <title>CESM Single Column Output &#8212; My sample book</title>
   
   
   
@@ -59,11 +59,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'students';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'exercises_cesm_scam';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Exercises" href="exercises.html" />
-    <link rel="prev" title="Presenters" href="presenters.html" />
+    <link rel="next" title="Weather Research and Forecasting Model (WRF)" href="exercises_wrf.html" />
+    <link rel="prev" title="Community Earth System Model" href="exercises_cesm.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -159,10 +159,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="before_arrival.html">Before you arrive</a></li>
 <li class="toctree-l1"><a class="reference internal" href="schedule.html">Colloquium Schedule</a></li>
 <li class="toctree-l1"><a class="reference internal" href="presenters.html">Presenters</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Student Attendees</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="exercises.html">Exercises</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1"><a class="reference internal" href="students.html">Student Attendees</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="exercises.html">Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="exercises_envs.html">Computing Environments</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">CESM Single Column Output</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -248,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fstudents.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fexercises_cesm_scam.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -278,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/students.md" target="_blank"
+      <li><a href="_sources/exercises_cesm_scam.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -288,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -347,7 +348,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -358,11 +361,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Student Attendees</h1>
+    <h1>CESM Single Column Output</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-look-for">Things to look for</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -372,34 +383,39 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="student-attendees">
-<h1>Student Attendees<a class="headerlink" href="#student-attendees" title="Permalink to this headline">#</a></h1>
-<p><strong>Qinqin Kong</strong>, Purdue                 <a class="reference external" href="mailto:kong97&#37;&#52;&#48;purdue&#46;edu">email</a>	<br />
-<strong>Linnea Huusko</strong>, Stockholm University <a class="reference external" href="mailto:linnea&#46;huusko&#37;&#52;&#48;misu&#46;su&#46;se">email</a>		 <br />
-<strong>David Crowe Pinilla</strong>, University of Virginia <a class="reference external" href="mailto:dac8ba&#37;&#52;&#48;virginia&#46;edu">email</a>	 <br />
-<strong>Chuck Baker</strong>, University of Maryland <a class="reference external" href="mailto:torcha98&#37;&#52;&#48;umd&#46;edu">email</a>	<br />
-<strong>Yue Qin</strong>, Boston University <a class="reference external" href="mailto:yueqin&#37;&#52;&#48;bu&#46;edu">email</a>	 <br />
-<strong>Adwoa Aboagye-Okyere</strong>, Cornell <a class="reference external" href="mailto:Aboagye-Okyere">email</a>	 <br />
-<strong>Michalis Karalis</strong>, Stockholm University <a class="reference external" href="mailto:michail&#46;karalis&#37;&#52;&#48;misu&#46;su&#46;se">email</a>	 <br />
-<strong>Worapp Thongsame</strong>, University of Colorado <a class="reference external" href="mailto:woth2709&#37;&#52;&#48;colorado&#46;edu">email</a>		 <br />
-<strong>Hrishikesh Sivanandan</strong>, Indiana University <a class="reference external" href="mailto:hrishikeshsivanandan&#37;&#52;&#48;gmail&#46;com">email</a>	 <br />
-<strong>Ariel Jacobs</strong>, University of Washington   <a class="reference external" href="mailto:amjacobs&#37;&#52;&#48;uw&#46;edu">email</a>	 <br />
-<strong>Melina Yabra</strong>, University of Buenos Aires <a class="reference external" href="mailto:myabra&#37;&#52;&#48;smn&#46;gob&#46;ar">email</a>	 <br />
-<strong>Lauren Cutler</strong>, University of Arizona <a class="reference external" href="mailto:laurencutler&#37;&#52;&#48;arizona&#46;edu">email</a> <br />
-<strong>Ellie Hojeily</strong>, Albany <a class="reference external" href="mailto:ehojeily&#37;&#52;&#48;albany&#46;edu">email</a> <br />
-<strong>Max Pierzyna</strong>, Delft University, Netherlands <a class="reference external" href="mailto:m&#46;pierzyna&#37;&#52;&#48;tudelft&#46;nl">email</a>	 <br />
-<strong>Michelle Spencer</strong>, Oklahoma University <a class="reference external" href="mailto:michelle&#46;r&#46;spencer&#37;&#52;&#48;ou&#46;edu">email</a>	 <br />
-<strong>Harsh Kamath</strong>, University of Texas <a class="reference external" href="mailto:kamath&#46;harsh&#37;&#52;&#48;utexas&#46;edu">email</a>	<br />
-<strong>Kate Seikel</strong>, University of South Carolina <a class="reference external" href="mailto:kseikel&#37;&#52;&#48;email&#46;sc&#46;edu">email</a>	 <br />
-<strong>Shim Yook</strong>, Colorado State University <a class="reference external" href="mailto:simchan&#46;yook&#37;&#52;&#48;colostate&#46;edu">email</a>	 <br />
-<strong>Lauren Pounds</strong>, NOAA <a class="reference external" href="mailto:lauren&#46;pounds&#37;&#52;&#48;noaa&#46;gov">email</a>	 <br />
-<strong>Muna Hafsah</strong>, University of Delaware  <a class="reference external" href="mailto:mhafsah&#37;&#52;&#48;udel&#46;edu">email</a><br />
-<strong>Qing Niu</strong>, Oklahoma Unversity <a class="reference external" href="mailto:qingniu&#37;&#52;&#48;ou&#46;edu">email</a>	 <br />
-<strong>Snigdha Samantaray</strong>, University of Miami <a class="reference external" href="mailto:sxs3853&#37;&#52;&#48;miami&#46;edu">email</a>	 <br />
-<strong>Elise Legarth</strong>, University of British Columbia, Canada <a class="reference external" href="mailto:elegarth&#37;&#52;&#48;eoas&#46;ubc&#46;ca">email</a>	 <br />
-<strong>Marian de Orla-Barile</strong>, UC Santa Barbara <a class="reference external" href="mailto:mariandeorla-barile&#37;&#52;&#48;ucsb&#46;edu">email</a> <br />
-<strong>Matthew Koszuta</strong>, Oregon State University <a class="reference external" href="mailto:koszutam&#37;&#52;&#48;oregonstate&#46;edu">email</a> <br />
-<strong>Mehtab Khan</strong>, Technical University of Delft, Netherlands <a class="reference external" href="mailto:m&#46;a&#46;khan-2&#37;&#52;&#48;tudelft&#46;nl">email</a></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="cesm-single-column-output">
+<h1>CESM Single Column Output<a class="headerlink" href="#cesm-single-column-output" title="Permalink to this headline">#</a></h1>
+<p>Another option for examining CESM is to analyze single column (grid-point) (SCAM) experiments over different regions and time of year</p>
+<ol class="arabic simple">
+<li><p><strong>ARM95</strong> Centered over the DOE Atmopsheric Radiation Measurement (<a class="reference external" href="http://arm.gov"><code class="docutils literal notranslate"><span class="pre">ARM</span></code></a>) facility during July/August 1995</p></li>
+<li><p><strong>ARM97</strong> Centered over the DOE Atmopsheric Radiation Measurement (<a class="reference external" href="http://arm.gov"><code class="docutils literal notranslate"><span class="pre">ARM</span></code></a>) facility during June/July 1997</p></li>
+<li><p><strong>TOGAII</strong> Centered over the West Pacific during part of the <a class="reference external" href="https://www.eol.ucar.edu/field_projects/toga-coare"><code class="docutils literal notranslate"><span class="pre">TOGA-COARE</span></code></a> campaign during December 1992/January 1993</p></li>
+<li><p><strong>GATEIII</strong> Centered over the Tropical Atlantic during part of the <a class="reference external" href="https://www.eol.ucar.edu/field_projects/gate"><code class="docutils literal notranslate"><span class="pre">GATE</span></code></a> campaign during August/September 1974</p></li>
+</ol>
+<p>Data from the CESM atmosphere model <code class="docutils literal notranslate"><span class="pre">CAM</span></code> and the land model <code class="docutils literal notranslate"><span class="pre">CLM</span></code> used in SCAM model can be found here
+<code class="docutils literal notranslate"><span class="pre">/glade/work/rneale/ASP2023/data/cesm_scam</span></code></p>
+<p>These files contain a multi-day period of output at high frequency <strong>(every 20 minutes)</strong>. There is also a selection of vertical resolutions that have been used</p>
+<ul class="simple">
+<li><p>32 levels in (<code class="docutils literal notranslate"><span class="pre">000.L32.cam</span></code>) files</p></li>
+<li><p>48 levels in (<code class="docutils literal notranslate"><span class="pre">000.L48.cam</span></code>) files</p></li>
+<li><p>58 levels in (<code class="docutils literal notranslate"><span class="pre">000.cam</span></code>) files (GATE only has this one available)</p></li>
+</ul>
+<p>These vertical level grids are documented in the figure below. This analysis is right at the cutting edge for CAM development as we are in the middle of ransitioned from 32 levels (L32) to L58 levels (L58). Crucially L58 has an additional 10 levels in the PBL.</p>
+<p>Use a simple look tool first <code class="docutils literal notranslate"><span class="pre">panoply</span></code> to look through and contrast the diurnal variability in the continental Summertime cases (<code class="docutils literal notranslate"><span class="pre">arm95,</span> <span class="pre">arm97</span></code>) with the oceanic Wintertime cases (<code class="docutils literal notranslate"><span class="pre">togaII,</span> <span class="pre">gateIII</span></code>)</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Try installing <code class="docutils literal notranslate"><span class="pre">panoply</span></code>(<a class="reference external" href="http://www.giss.nasa.gov/tools/panoply/">here</a>) locally on your laptop and move the small files above to your laptop to reduced <code class="docutils literal notranslate"><span class="pre">cheyenne</span></code> lateny</p>
+</div>
+<p><img alt="" src="_images/CAM67_vres.png" /></p>
+<div class="section" id="things-to-look-for">
+<h2>Things to look for<a class="headerlink" href="#things-to-look-for" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p>Diurnal variation differences over land and ocean (timing of precipitation; temperature maxima)</p></li>
+<li><p>Different PBL depths and properties at different resolutions</p></li>
+<li><p>Vertical variaitons of conserved quantities (theta, humidity)</p></li>
+<li><p>Comparison with observed profiles and theory (CBL, CLASS)</p></li>
+</ul>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -411,16 +427,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "jbooks"
         },
         kernelOptions: {
-            name: "python3",
+            name: "jbooks",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'jbooks'</script>
 
                 </article>
               
@@ -434,20 +450,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="presenters.html"
+       href="exercises_cesm.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Presenters</p>
+        <p class="prev-next-title">Community Earth System Model</p>
       </div>
     </a>
     <a class="right-next"
-       href="exercises.html"
+       href="exercises_wrf.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercises</p>
+        <p class="prev-next-title">Weather Research and Forecasting Model (WRF)</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -460,6 +476,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#things-to-look-for">Things to look for</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
