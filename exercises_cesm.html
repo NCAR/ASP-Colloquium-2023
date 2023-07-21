@@ -582,8 +582,12 @@ ncview $CASE.cam.h0.0001.01.nc
 <li><p>Extended case: Climate change simulation</p></li>
 </ol>
 <p>We will run a second simulation that modifies the Sea Surface Temperature (SST) to be <code class="docutils literal notranslate"><span class="pre">SST.new=SST.f2000+4K</span></code> this is a basleine climate sensitivty experiment used in <code class="docutils literal notranslate"><span class="pre">CMIP</span></code> protocals.
-See <code class="docutils literal notranslate"><span class="pre">Cecile's</span></code> presentation for details on how to chnage to the +4K SST dataset</p>
+See <code class="docutils literal notranslate"><span class="pre">Cecile's</span></code> presentation for details on how to changge to the +4K SST dataset</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">work</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">ASP2023</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">sst_HadOIBl_bc_1</span><span class="mf">.9</span><span class="n">x2</span><span class="mf">.5</span><span class="n">_clim_SST</span><span class="o">+</span><span class="mi">4</span><span class="n">K</span><span class="o">.</span><span class="n">c230718</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p>Use this command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">xmlchange</span> <span class="n">SSTICE_DATA_FILENAME</span><span class="o">=</span><span class="s2">&quot;/glade/work/rneale/ASP2023/data/sst_HadOIBl_bc_1.9x2.5_clim_SST+4K.c230718.nc&quot;</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="12">
