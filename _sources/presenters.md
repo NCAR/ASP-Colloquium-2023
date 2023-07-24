@@ -9,6 +9,7 @@ Below are the list of presenters confirmed for the colloquium.
 **Elie R. Bou-Zeid**, Princeton [email](mailto:ebouzeid@princeton.edu) \
 **Charlotte DeMott**, Colorado State University [email](mailto:Charlotte.Demott@colostate.edu) \
 **Ian Faloona**, UC Davis [email](mailto:icfaloona@ucdavis.edu) \
+**John Finnigan**, CSIRO, Australia [email](mailto:john.finnigan@csiro.au) \
 **Ethan Guttman**, NCAR [email](mailto:gutmann@ucar.edu) \
 **Alma Hodzic**, NCAR [email](mailto:alma@ucar.edu) \
 **Pedro Jiminez**, NCAR [email](mailto:jimenez@ucar.edu) \
@@ -23,7 +24,7 @@ Below are the list of presenters confirmed for the colloquium.
 **Steve Oncley**, NCAR [email](mailto:oncley@ucar.edu) \
 **Ned Patton**, NCAR [email](mailto:patton@ucar.edu) \
 **Ivana Stiperski**, University of Innsbruck [email](mailto:ivana.stiperski@uibk.ac.at) \
-**Gunilla Svenson**, Stockholm University [email](mailto:gunilla@misu.su.se) \
+**Gunilla Svensson**, Stockholm University [email](mailto:gunilla@misu.su.se) \
 **Jessica Tomaszewski**, REsurety [email](mailto:jtomaszewski@resurety.com) \
 **Michael Tjernstrom**, Stockholm University [email](mailto:michaelt@misu.su.se) \
 **Pauita Zuidema**, University of Miami [email](mailto:pzuidema@miami.edu) 

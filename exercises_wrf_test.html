@@ -162,7 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="students.html">Student Attendees</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="exercises.html">Exercises</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="exercises_envs.html">Computing Environments</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l2 has-children"><a class="reference internal" href="exercises_cesm.html">Community Earth System Model</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="exercises_cesm_scam.html">CESM Single Column Output</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exercises_wrf.html">Weather Research and Forecasting Model (WRF)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
@@ -469,7 +470,9 @@ Browse data (should for the most part be obviously North East USA)</p></li>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Data needed to run this case study can be found here:
-<code class="docutils literal notranslate"><span class="pre">/glade/scratch/rneale/GFS/</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">/glade/scratch/rneale/GFS/asp01/</span></code>
+If you wish to run a case study from a different time period you need to copy GFS data from NCAR’s Research Data Archive (RDA) repository found here <code class="docutils literal notranslate"><span class="pre">/glade/collections/rda/data/ds084.1/</span></code>, Copy files for the desired time period (between 2015 and 2023) into your own GFS directory e.g., <code class="docutils literal notranslate"><span class="pre">/glade/scratch/$USER/GFS/</span></code> Use the <code class="docutils literal notranslate"><span class="pre">f000</span></code> files to get the analysis time data
+and link with <code class="docutils literal notranslate"><span class="pre">./link_grib.csh</span></code> as below.</p>
 </div>
 <p>With the changes to <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> run WPS to set up processing of meteorology fields for initial and boundary forcing</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">link_grib</span><span class="o">.</span><span class="n">csh</span> <span class="o">/</span><span class="n">glade</span><span class="o">/</span><span class="n">scratch</span><span class="o">/</span><span class="n">rneale</span><span class="o">/</span><span class="n">GFS</span><span class="o">/</span><span class="n">asp1</span><span class="o">/</span>
@@ -488,7 +491,7 @@ Browse data (should for the most part be obviously North East USA)</p></li>
 </pre></div>
 </div>
 <p>The extensive output from running this command details the available data variables and levels used for interpolation.
-Look for:</p>
+Look for:e Bhaktivedanta Manor, i</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!  Successful completion of ungrib.   !
 </pre></div>
 </div>
