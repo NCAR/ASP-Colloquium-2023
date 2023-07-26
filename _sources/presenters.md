@@ -10,7 +10,7 @@ Below are the list of presenters confirmed for the colloquium.
 **Charlotte DeMott**, Colorado State University [email](mailto:Charlotte.Demott@colostate.edu) \
 **Ian Faloona**, UC Davis [email](mailto:icfaloona@ucdavis.edu) \
 **John Finnigan**, CSIRO, Australia [email](mailto:john.finnigan@csiro.au) \
-**Ethan Guttman**, NCAR [email](mailto:gutmann@ucar.edu) \
+**Ethan Guttmann**, NCAR [email](mailto:gutmann@ucar.edu) \
 **Alma Hodzic**, NCAR [email](mailto:alma@ucar.edu) \
 **Pedro Jiminez**, NCAR [email](mailto:jimenez@ucar.edu) \
 **Branko Kosovic**, NCAR [email](mailto:branko@ucar.edu) \

@@ -125,7 +125,7 @@ Free time:
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Alma Hodzic** <br/> National Center for Atmospheric Research		   |  <span style="color:blue">**Modeling and Measurements of Aerosols in the Boundary Layer**</span>	||
 | 12:00-1:30 | *Lunch (chat with speakers)* 			 |  				||			
-| 1:30-3:00  | 	**In the Field Report [M2HATS](https://www.eol.ucar.edu/field_projects/m2hats)** <br/> **Steve Oncley**<br/>*+*<br/> **Project Time**		   | 				||
+| 1:30-3:00  | 	**Project Time**		   | 				||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Project Time**   |				||	
 | 5:15       | 		Shuttle to CU	   |				||	
@@ -139,11 +139,12 @@ Free time:
 | 8:30-9:30  | **Charlotte DeMott** <br/> Colorado State University      | <span style="color:blue">**Air-Sea Interactions**</span>			|
 | 9:30-10:30 | **Dan Li**  <br/>  Boston University        | 	<span style="color:blue">**Land-Atmosphere Feedbacks and Implications for Urban Heat and its Mitigation**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:00| **Ethan Gutman** <br/> National Center for Atmospheric Research		   | <span style="color:blue">**Snow Surfaces and Boundary Layers**</span>	||
+| 11:00-12:00| **Ethan Gutmann** <br/> National Center for Atmospheric Research		   | <span style="color:blue">**Snow Surfaces and Boundary Layers**</span>	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	Adriana Medina <br/>Professional Development	   | <span style="color:blue">**Implicit Bias**</span>		||
-| 3:00-3:30  | 	*Break* 		   |				||		
-| 3:30-5:00  | 		**Local Hike**   |				||	
+| 3:00-3:30  |**In the Field Report [M2HATS](https://www.eol.ucar.edu/field_projects/m2hats)** <br/> **Steve Oncley**<br/>
+| 3:30-4:00  | 	*Break* 		   |				||		
+| 4:00-5:00  | 		**Local Hike or Project Time**   |				||	
 | 5:15       | 		Shuttle to CU	   |				||	
 
 
@@ -169,11 +170,11 @@ Free time:
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Drag in the Atmosphere: PBLs, Obstacles and Gravity Waves
 **</span>			|
-| 9:30-10:30 | **Project Time **        |  |
+| 9:30-10:30 | **Project Time**        |  |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Project Time and Presenetation Preparation**		   | 	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
-| 1:30-3:00  | 	**Student Pressentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
+| 1:30-3:00  | 	**Student Presentations**		   |  <span style="color:blue">**5 mins each per group**</span>					||
 | 3:00-3:30  | 	*Break* 		   |				||		
 | 3:30-5:00  | 		**Student Presentations (continued)**   |		 <span style="color:blue">**5 mins each per group**</span>			||	
 | 5:15       | 		Shuttle to CU	   |				||	
