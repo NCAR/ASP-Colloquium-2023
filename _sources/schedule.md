@@ -18,8 +18,8 @@ Students Arrive in Boulder
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
 | 8:30-8:40  | Welcome from NCAR Leadership           |               || 
-| 8:40-9:30  | **Richard Neale** <br/> National Center for Atmospheric Research     | <span style="color:blue">**Colloquium Introduction and Housekeeping**</span> <br/> 		|
-| 9:30-10:30 | **Ned Patton**  <br/> National Center for Atmospheric Research          | 	<span style="color:blue">**The Atmospheric Boundary Layer: Integrating Complexity Across Disciplines**</span> |
+| 8:40-9:30  | **Richard Neale** <br/> National Center for Atmospheric Research     | <span style="color:blue">**Colloquium Introduction and Housekeeping**</span> <br/> 		|    ||
+| 9:30-10:30 | **Ned Patton**  <br/> National Center for Atmospheric Research  | 	<span style="color:blue">**The Atmospheric Boundary Layer: Integrating Complexity Across Disciplines**</span> ([slides](https://drive.google.com/open?id=1TOkbFcqzRbOkBKfpnTadEQ0Y957cX4qJ&usp=drive_copy)\|[video](https://drive.google.com/file/d/1MgUMHe3Vtf4md52RTrPtGDoTDTj1ZlVs/view?usp=drive_link))||
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:30| **Student lightning research talks**		   |		<span style="color:blue">**3 minute talks - 2 slides**</span><br/>Drop slides [**here**](https://drive.google.com/drive/folders/1ZJigy5Wis2nQcCM7xwXfneWOJdjOeDO7?usp=sharing) <br/> Schedule [**here**](https://docs.google.com/document/d/1_PZnqkOT9fAORO43rCUzsw7bIoF3KfeAWJ2uQu0hG3Y/edit)		||
 | 12:30-1:30 | *Lunch* 			 |  				||			
@@ -156,7 +156,7 @@ Free time:
 | 8:30-9:30  | **Elie Bou-Zeid** <br/> Princeton      |  <span style="color:blue">**Beyond the textbook: Unsteady and Baroclinic Flow and Turbulence in the ABL**</span>		|
 | 9:30-10:30 | **Jessica Tomaszewski**  <br/> REsurety        | 	<span style="color:blue">**Renewable Energy in the Boundary Layer**</span> |
 | 10:30-11:00| *Break*                    | 				||
-| 11:00-12:00| **Rose Sentana** <br/>Professional Development		   | <span style="color:blue">**Social Media and Careers**</span>		||
+| 11:00-12:00| **Rose Santana** <br/>Professional Development		   | <span style="color:blue">**Social Media, COmmunication and Careers**</span>		||
 | 12:00-1:30 | *Lunch* 			 |  				||			
 | 1:30-3:00  | 	**Project Time**		   | 				||
 | 3:00-3:30  | 	*Break* 		   |				||		
@@ -168,9 +168,8 @@ Free time:
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
-| 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Drag in the Atmosphere: PBLs, Obstacles and Gravity Waves
-**</span>			|
-| 9:30-10:30 | **Project Time**        |  |
+| 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Drag in the Atmosphere: PBLs, Obstacles and Gravity Waves**</span>			|
+| 9:30-10:30 | **Hike of Project Time**        |  |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Project Time and Presentation Preparation**		   | 	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
