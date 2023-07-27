@@ -173,7 +173,7 @@ Free time:
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Project Time and Presentation Preparation**		   | 	||
 | 12:00-1:30 | *Lunch* 			 |  				||			
-| 1:30-3:00  | 	**Student Presentations**		   |  <span style="color:blue">**5 mins each per group**</span> <Slide drop>(https://drive.google.com/drive/u/1/folders/15OkgSHMaLoK3Xlmn7c40gx8RfxKOxlM0)					||
+| 1:30-3:00  | 	**Student Presentations**		   |  <span style="color:blue">**5 mins each per group**</span> ([Slide drop](https://drive.google.com/drive/u/1/folders/15OkgSHMaLoK3Xlmn7c40gx8RfxKOxlM0))				||
 | 3:00-3:30  | 	*Break* 		   |				||		
-| 3:30-5:00  | 		**Student Presentations (continued)**   |		 <span style="color:blue">**5 mins each per group**</span> <Slide drop>(https://drive.google.com/drive/u/1/folders/15OkgSHMaLoK3Xlmn7c40gx8RfxKOxlM0)			||	
+| 3:30-5:00  | 		**Student Presentations (continued)**   |		 <span style="color:blue">**5 mins each per group**</span> ([Slide drop](https://drive.google.com/drive/u/1/folders/15OkgSHMaLoK3Xlmn7c40gx8RfxKOxlM0))		||	
 | 5:15       | 		Shuttle to CU	   |				||	
