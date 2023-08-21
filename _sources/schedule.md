@@ -169,7 +169,7 @@ Free time:
 | Time       |         Presentation/Activity | Details	|
 | --------   | ------------------- |----------------------------|
 | 8:00-8:30  | *Shuttle to NCAR*                    | 				||
-| 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Drag in the Atmosphere: PBLs, Obstacles and Gravity Waves**</span>	([slides]()\|[video](https://drive.google.com/file/d/1pd0XsjmfJ1hI_9-4ovolkxmDvLFx7eQi/view?usp=drive_link))		|
+| 8:30-9:30  | **Julio Bacmeister** <br/>  National Center for Atmospheric Research	      |  <span style="color:blue">**Drag in the Atmosphere: PBLs, Obstacles and Gravity Waves**</span>	([slides](https://docs.google.com/presentation/d/11KiEQ50VIHXRWydHQbVHQFEusy0x3dZi/edit?usp=drive_link&ouid=107513505509427216410&rtpof=true&sd=true)\|[video](https://drive.google.com/file/d/1pd0XsjmfJ1hI_9-4ovolkxmDvLFx7eQi/view?usp=drive_link))		|
 | 9:30-10:30 | **Hike or Project Time**        | For hike: Water, hat, sunglasses, sunscreen, sturdy shoes (probably 2 hrs?)  |
 | 10:30-11:00| *Break*                    | 				||
 | 11:00-12:00| **Project Time and Presentation Preparation**		   | 	||
