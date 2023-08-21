@@ -115,6 +115,7 @@ Free time:
 | 3:30-5:00  | 		**Project Time**   |				||	
 | 5:15       | 		Shuttle to CU	   |				||	
 
+
 ## Tuesday, July 25
 
 | Time       |         Presentation/Activity | Details	|
